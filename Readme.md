@@ -1,7 +1,7 @@
 # Личный проект «Кэт энерджи»
 
 * Студент: [Анастасия Палихова](https://up.htmlacademy.ru/adaptive/26/user/2075495).
-* Наставник: `Дмитрий (sench) Железцов`.
+* Наставник: [Дмитрий (sench) Железцов](https://htmlacademy.ru/profile/sench).
 
 ---
 
