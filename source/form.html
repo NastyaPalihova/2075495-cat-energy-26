@@ -4,10 +4,11 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Кэт энерджи</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body class="page__body">
-  <header class="main-header">
+  <header class="main-header main-header__wrapper">
     <a class="main-header__logo">
       <img class="main-header__logo-image" src="img/logo-mobile.png" width="34" height="38" alt="Логотип Cat Energy.">
     </a>
@@ -19,7 +20,7 @@
         <span class="visually-hidden">Открыть меню</span>
       </button>
       <div class="main-nav__wrapper">
-        <ul class="main-nav__list site-list">
+        <ul class="main-nav__list site-list reset-list">
           <li class="site-list__item site-list__item--current">
             <a class="site-list__item-link" href="index.html">
               Главная
@@ -47,6 +48,7 @@
 
       <fieldset class="form__cat-info">
         <legend class="visually-hidden">Информация о коте</legend>
+
         <label class="form__cat-info-label" for="name">Имя:*</label>
         <input class="form__cat-info-input" type="text" id="name" name="name" placeholder="Барсик">
 
@@ -73,7 +75,7 @@
       </fieldset>
 
       <fieldset class="form__master-info">
-        <legend class="form__master-info-legend">Контактные данные (владельца кота)</legend>
+        <legend class="form__master-info-legend form__legend">Контактные данные (владельца кота)</legend>
 
         <label class="form__master-info-label" for="email">E-mail:*</label>
         <input class="form__master-info" type="email" id="email" name="email" placeholder="kuklachev@gmail.com">
@@ -83,28 +85,29 @@
       </fieldset>
 
       <fieldset class="form__more-info">
-        <legend class="form__more-info-legend">Комментарий</legend>
+        <legend class="form__more-info-legend form__legend">Комментарий</legend>
         <input class="form__more-info" type="text" id="text" name="text"
           placeholder="Расскажите обо всех повадках кота">
       </fieldset>
 
       <fieldset class="form__extra">
-        <legend class="form__extra-legend">Дополнительно</legend>
+        <legend class="form__extra-legend form__legend">Дополнительно</legend>
 
-        <label class="form__extra-label" for="sweetener">Сахарозаменитель</label>
         <input class="form__extra-input" type="checkbox" id="sweetener" name="sweetener">
+        <label class="form__extra-label" for="sweetener">Сахарозаменитель</label>
 
-        <label class="form__extra-label" for="water">Питьевая вода</label>
         <input class="form__extra-input" type="checkbox" id="water" name="water">
+        <label class="form__extra-label" for="water">Питьевая вода</label>
 
-        <label class="form__extra-label" for="milk">Молоко</label>
         <input class="form__extra-input" type="checkbox" id="milk" name="milk">
+        <label class="form__extra-label" for="milk">Молоко</label>
 
-        <label class="form__extra-label" for="vitamines">Витамины</label>
         <input class="form__extra-input" type="checkbox" id="vitamines" name="vitamines">
+        <label class="form__extra-label" for="vitamines">Витамины</label>
+
       </fieldset>
 
-      <button class="form__button button" type="submit">Отправить заявку</button>
+      <button class="form__button button button--form" type="submit">Отправить заявку</button>
       <small class="form__note">* — Обязательные поля</small>
     </form>
   </main>
@@ -112,44 +115,47 @@
     <div class="main-footer__wrapper">
       <h2 class="visually-hidden">Наш адрес</h2>
       <div class="main-footer-adress">
-        <b class="main-footer-adress__title">Приглашаем к сотрудничеству дилеров!</b>
-        <p class="main-footer-adress__description">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+        <div class="main-footer-adress__wrapper">
+          <b class="main-footer-adress__title">Приглашаем к сотрудничеству дилеров!</b>
+          <p class="main-footer-adress__description">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+        </div>
         <img class="main-footer-adress__image" src="img/location.jpg" width="320" height="362"
           alt="Расположение Cat Energy на карте.">
       </div>
-      <div class="main-footer__logo">
-        <img class="main-footer__logo-image" src="img/logo-title.svg" width="128" height="24"
-          alt="Название Cat Energy.">
-      </div>
-      <div class="main-footer__social social">
-        <h2 class="visually-hidden social__title">Давайте дружить!</h2>
-        <ul class="social__list">
-          <li class="social__item">
-            <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy">
-              <span class="visually-hidden">Мы в Вконтакте.</span>
-            </a>
-          </li>
-          <li class="social__item">
-            <a class="social__link social__link--youtube" href="https://www.youtube.com/user/htmlacademyru">
-              <span class="visually-hidden">Мы в Ютубе.</span>
-            </a>
-          </li>
-          <li class="social__item">
-            <a class="social__link social__link--telegram" href="https://t.me/htmlacademy">
-              <span class="visually-hidden">Мы в Телеграме.</span>
-            </a>
-          </li>
-        </ul>
-      </div>
-      <div class="main-footer__academy academy">
-        <p class="academy__title">HTML Academy</p>
-        <a class="academy__image" href="https://htmlacademy.ru/">
-          <span class="visually-hidden">Перейти на сайт HTML Academy.</span>
-        </a>
+      <div class="main-footer__ending">
+        <div class="main-footer__logo">
+          <img class="main-footer__logo-image" src="img/logo-title.svg" width="128" height="24"
+            alt="Название Cat Energy.">
+        </div>
+        <div class="main-footer__social social">
+          <h2 class="visually-hidden social__title">Давайте дружить!</h2>
+          <ul class="social__list reset-list">
+            <li class="social__item">
+              <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy">
+                <span class="visually-hidden">Мы в Вконтакте.</span>
+              </a>
+            </li>
+            <li class="social__item">
+              <a class="social__link social__link--youtube" href="https://www.youtube.com/user/htmlacademyru">
+                <span class="visually-hidden">Мы в Ютубе.</span>
+              </a>
+            </li>
+            <li class="social__item">
+              <a class="social__link social__link--telegram" href="https://t.me/htmlacademy">
+                <span class="visually-hidden">Мы в Телеграме.</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="main-footer__academy academy">
+          <p class="academy__title">HTML Academy</p>
+          <a class="academy__image" href="https://htmlacademy.ru/">
+            <span class="visually-hidden">Перейти на сайт HTML Academy.</span>
+          </a>
+        </div>
       </div>
     </div>
   </footer>
-
 </body>
 
 </html>
