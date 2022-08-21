@@ -1,5 +1,8 @@
 .show-more {
   padding: 25px 20px;
+  display: flex;
+  flex-direction: column;
+  max-width: 279px;
 }
 
 .show-more__title {
@@ -20,4 +23,12 @@
 
 .show-more__button {
   padding: 10px 94px;
+}
+
+@media (min-width: @tablet-width) {
+  .show-more__card {
+    min-height: 429px;
+    min-width: 324px;
+    justify-content: space-between;
+  }
 }

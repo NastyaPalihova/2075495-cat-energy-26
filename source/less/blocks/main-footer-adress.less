@@ -3,7 +3,6 @@
   line-height: 20px;
   text-transform: uppercase;
   max-width: 170px;
-
 }
 
 .main-footer-adress__wrapper {
@@ -27,10 +26,20 @@
   gap: 20px;
 }
 
+@media (min-width: @desctop-width) {
+  .main-footer-adress__wrapper {
+    display: none;
+  }
+}
+
 /* не работает почему-то :( */
 @media (min-width: @tablet-width) {
   .main-footer-adress__image {
     display: none;
+  }
+
+  .main-footer-adress__wrapper {
+    padding: 26px 70px;
   }
 
   .main-footer-adress__image--tablet {

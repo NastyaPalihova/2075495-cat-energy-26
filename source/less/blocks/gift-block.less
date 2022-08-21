@@ -7,8 +7,21 @@
     url("../../img/gift-cat.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  width: 280px;
+  min-width: 280px;
   min-height: 290px;
+}
+
+@media (min-width: @tablet-width) {
+  .gift-block {
+    min-height: 200px;
+  }
+}
+
+@media (min-width: @desctop-width) {
+  .gift-block {
+    min-height: 289px;
+    max-width: 246px;
+  }
 }
 
 .gift-block__description {

@@ -12,6 +12,7 @@
   font-size: 16px;
   line-height: 16px;
   text-transform: uppercase;
+  margin: 0;
 }
 
 .extra__table {
@@ -19,3 +20,34 @@
   font-size: 14px;
   line-height: 14px;
 }
+
+.extra__list {
+  margin: 19px 18px;
+}
+
+@media (min-width: @tablet-width) {
+  .extra-list {
+    display: grid;
+    grid-template-columns: 708px;
+    grid-template-rows: 139px 139px 139px 139px;
+  }
+
+  .extra__item-wrapper {
+    display: grid;
+    grid-template-columns: 316px 316px;
+    grid-template-rows: 40px 40px;
+  }
+
+  .button--order {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+}
+
+@media (min-width: @desctop-width) {
+  .extra__wrapper-desctop {
+    display: flex;
+    gap: 80px;
+  }
+}
+
