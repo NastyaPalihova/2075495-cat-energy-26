@@ -5,9 +5,17 @@
   ),
     url("../img/index-background-cat.jpg");
   background-repeat: no-repeat;
-  width: 320px;
+  background-size: cover;
+  min-width: 320px;
+  max-height: 302px;
 }
 
 .first-screen__wrapper {
-  padding: 27px 37px 27px 27px;
+  padding: 27px 21px 27px 21px;
+}
+
+@media (min-width: @tablet-width) and (max-width: @desctop-width) {
+  .first-screen {
+    background-image: none;
+  }
 }

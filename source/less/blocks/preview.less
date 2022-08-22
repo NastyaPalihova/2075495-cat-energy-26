@@ -1,3 +1,7 @@
+.preview {
+  margin-top: 177px;
+}
+
 .preview__title {
   text-transform: uppercase;
   font-size: 24px;
@@ -15,6 +19,24 @@
   background-color: @focus-color;
   padding: 20px;
   margin: 20px;
+}
+
+@media (min-width: @tablet-width) {
+  .preview__item {
+    padding: 53px;
+  }
+
+  .preview__description {
+    max-width: 340px;
+  }
+}
+
+@media (min-width: @desctop-width) {
+  .preview__list {
+    display: grid;
+    grid-template-columns: 570px 570px;
+    gap: 80px;
+  }
 }
 
 .preview__description {

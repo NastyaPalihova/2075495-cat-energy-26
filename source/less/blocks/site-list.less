@@ -8,5 +8,36 @@
 }
 
 .site-list {
-  display: grid;
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: @tablet-width) {
+  .site-list {
+    flex-direction: row;
+    justify-content: space-between;
+    min-width: 440px;
+    margin: 0 auto;
+    gap: 34px;
+  }
+}
+
+@media (min-width: @desctop-width) {
+  .site-list {
+    flex-direction: row;
+    justify-content: space-between;
+    min-width: 680px;
+    margin: 0 auto;
+  }
+}
+
+.site-list__item {
+  margin: 0 auto;
+  padding: 22px 0;
+}
+
+@media (max-width: @mobile-width-only) {
+  .site-list__item-link {
+    font-weight: 700;
+  }
 }

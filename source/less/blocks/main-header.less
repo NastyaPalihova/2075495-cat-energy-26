@@ -1,8 +1,38 @@
 .main-header {
   background-color: @base-color;
+  padding: 10px 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: @tablet-width) {
+  .main-header {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .main-header__wrapper {
+    gap: 20px;
+  }
 }
 
 .main-header__wrapper {
   display: flex;
   justify-content: space-between;
+}
+
+.main-header__wrapper-head {
+  display: flex;
+  justify-content: space-between;
+}
+
+.main-header__icon {
+  min-width: 34px;
+  min-height: 38px;
+}
+
+.main-header__logo {
+  min-width: 101px;
+  min-height: 51px;
+  padding-top: 10px;
 }

@@ -3,42 +3,46 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Кэт энерджи</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body class="page__body">
   <header class="main-header main-header__wrapper">
-    <a class="main-header__logo">
-      <img class="main-header__logo-image" src="img/logo-mobile.png" width="34" height="38" alt="Логотип Cat Energy.">
-    </a>
-    <a class="main-header__logo">
-      <img class="main-header__logo-image" src="img/logo-title.svg" width="101" height="18" alt="Название Cat Energy.">
-    </a>
-    <nav class="main-nav">
-      <button class="main-nav__toggle" type="button">
-        <span class="visually-hidden">Открыть меню</span>
-      </button>
-      <div class="main-nav__wrapper">
-        <ul class="main-nav__list site-list reset-list">
-          <li class="site-list__item site-list__item--current">
-            <a class="site-list__item-link" href="index.html">
-              Главная
-            </a>
-          </li>
-          <li class="site-list__item">
-            <a class="site-list__item-link" href="catalog.html">
-              Каталог продукции
-            </a>
-          </li>
-          <li class="site-list__item">
-            <a class="site-list__item-link" href="form.html">
-              Подбор программы
-            </a>
-          </li>
-        </ul>
-      </div>
-    </nav>
+    <div class="main-header__wrapper-head">
+      <a class="main-header__icon">
+        <img class="main-header__icon-image" src="img/logo-mobile.png" width="34" height="38" alt="Логотип Cat Energy.">
+      </a>
+      <a class="main-header__logo">
+        <img class="main-header__logo-image" src="img/logo-title.svg" width="101" height="18"
+          alt="Название Cat Energy.">
+      </a>
+      <nav class="main-nav">
+        <button class="main-nav__toggle" type="button">
+          <span class="visually-hidden">Открыть меню</span>
+        </button>
+    </div>
+    <div class="main-nav__wrapper">
+      <ul class="main-nav__list main-nav__list--closed site-list reset-list">
+        <li class="site-list__item site-list__item--current">
+          <a class="site-list__item-link" href="index.html">
+            Главная
+          </a>
+        </li>
+        <li class="site-list__item">
+          <a class="site-list__item-link" href="catalog.html">
+            Каталог продукции
+          </a>
+        </li>
+        <li class="site-list__item">
+          <a class="site-list__item-link" href="form.html">
+            Подбор программы
+          </a>
+        </li>
+      </ul>
+      </nav>
+    </div>
   </header>
 
   <main class="main-container form">
@@ -46,42 +50,49 @@
     <p class="form__description">Заполните анкету, и мы подберем программу питания для вашего кота</p>
     <form class="form__section" action="https://echo.htmlacademy.ru/" method="get">
 
-      <fieldset class="form__cat-info">
-        <legend class="visually-hidden">Информация о коте</legend>
+      <div class="form__info-programm-wrapper">
+        <fieldset class="form__cat-info">
+          <div class="form__cat-info-wrapper">
+            <legend class="visually-hidden">Информация о коте</legend>
 
-        <label class="form__cat-info-label" for="name">Имя:*</label>
-        <input class="form__cat-info-input" type="text" id="name" name="name" placeholder="Барсик">
+            <label class="form__cat-info-label" for="name">Имя:*</label>
+            <input class="form__cat-info-input" type="text" id="name" name="name" placeholder="Барсик">
 
-        <label class="form__cat-info-label" for="weight">Вес (кг):*</label>
-        <input class="form__cat-info-input" type="number" id="weight" name="weight" placeholder="7">
+            <label class="form__cat-info-label" for="weight">Вес (кг):*</label>
+            <input class="form__cat-info-input" type="number" id="weight" name="weight" placeholder="7">
 
-        <label class="form__cat-info-label" for="age">Возраст (лет):</label>
-        <input class="form__cat-info-input" type="number" id="age" name="age" placeholder="7">
+            <label class="form__cat-info-label" for="age">Возраст (лет):</label>
+            <input class="form__cat-info-input" type="number" id="age" name="age" placeholder="7">
+          </div>
+        </fieldset>
 
-      </fieldset>
+        <fieldset class="form__cat-programm">
+          <div class="form__cat-programm-wrapper">
+            <legend class="visually-hidden">Цель</legend>
 
-      <fieldset class="form__cat-programm">
-        <legend class="visually-hidden">Цель</legend>
+            <input class="form__cat-programm-input" type="radio" id="loose" name="loose">
+            <label class="form__cat-programm-label" for="loose">Похудение</label>
 
-        <input class="form__cat-programm-input" type="radio" id="loose" name="loose">
-        <label class="form__cat-programm-label" for="loose">Похудение</label>
+            <input class="form__cat-programm-input" type="radio" id="gain" name="gain">
+            <label class="form__cat-programm-label" for="gain">Набор массы</label>
 
-        <input class="form__cat-programm-input" type="radio" id="gain" name="gain">
-        <label class="form__cat-programm-label" for="gain">Набор массы</label>
+            <input class="form__cat-programm-input" type="radio" id="dont-know" name="dont-know">
+            <label class="form__cat-programm-label" for="dont-know">Не знаю (Нужен ваш совет)</label>
+          </div>
+        </fieldset>
 
-        <input class="form__cat-programm-input" type="radio" id="dont-know" name="dont-know">
-        <label class="form__cat-programm-label" for="dont-know">Не знаю (Нужен ваш совет)</label>
-
-      </fieldset>
+      </div>
 
       <fieldset class="form__master-info">
         <legend class="form__master-info-legend form__legend">Контактные данные (владельца кота)</legend>
+        <div class="form__master-info-wrapper">
+          <label class="form__master-info-label" for="email">E-mail:*</label>
+          <input class="form__master-info" type="email" id="email" name="email" placeholder="kuklachev@gmail.com">
 
-        <label class="form__master-info-label" for="email">E-mail:*</label>
-        <input class="form__master-info" type="email" id="email" name="email" placeholder="kuklachev@gmail.com">
+          <label class="form__master-info-label" for="phone">Телефон:*</label>
+          <input class="form__master-info" type="tel" id="phone" name="phone" placeholder="8 (960) 900-60-90">
 
-        <label class="form__master-info-label" for="phone">Телефон:*</label>
-        <input class="form__master-info" type="tel" id="phone" name="phone" placeholder="8 (960) 900-60-90">
+        </div>
       </fieldset>
 
       <fieldset class="form__more-info">
@@ -92,19 +103,25 @@
 
       <fieldset class="form__extra">
         <legend class="form__extra-legend form__legend">Дополнительно</legend>
+        <div class="form__extra-item">
+          <input class="form__extra-input" type="checkbox" id="sweetener" name="sweetener">
+          <label class="form__extra-label" for="sweetener">Сахарозаменитель</label>
+        </div>
 
-        <input class="form__extra-input" type="checkbox" id="sweetener" name="sweetener">
-        <label class="form__extra-label" for="sweetener">Сахарозаменитель</label>
+        <div class="form__extra-item">
+          <input class="form__extra-input" type="checkbox" id="water" name="water">
+          <label class="form__extra-label" for="water">Питьевая вода</label>
+        </div>
 
-        <input class="form__extra-input" type="checkbox" id="water" name="water">
-        <label class="form__extra-label" for="water">Питьевая вода</label>
+        <div class="form__extra-item">
+          <input class="form__extra-input" type="checkbox" id="milk" name="milk">
+          <label class="form__extra-label" for="milk">Молоко</label>
+        </div>
 
-        <input class="form__extra-input" type="checkbox" id="milk" name="milk">
-        <label class="form__extra-label" for="milk">Молоко</label>
-
-        <input class="form__extra-input" type="checkbox" id="vitamines" name="vitamines">
-        <label class="form__extra-label" for="vitamines">Витамины</label>
-
+        <div class="form__extra-item">
+          <input class="form__extra-input" type="checkbox" id="vitamines" name="vitamines">
+          <label class="form__extra-label" for="vitamines">Витамины</label>
+        </div>
       </fieldset>
 
       <button class="form__button button button--form" type="submit">Отправить заявку</button>

@@ -4,4 +4,13 @@
 
 .main-footer__ending {
   background-color: @focus-color;
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: @tablet-width) {
+  .main-footer__ending {
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }

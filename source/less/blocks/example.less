@@ -1,5 +1,8 @@
 .example__wrapper {
   background-color: @example-color;
+}
+
+.example__wrapper-data {
   padding: 20px;
 }
 
@@ -38,6 +41,7 @@
   display: flex;
   margin: 0;
   gap: 32px;
+  justify-content: space-between;
 }
 
 .example__item {
@@ -55,4 +59,38 @@
 .example__image {
   width: 280px;
   height: 232px;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.example__changes {
+  margin-left: auto;
+  margin-right: auto;
+  width: 250px;
+}
+
+@media (min-width: @tablet-width) {
+  .example__list-tablet {
+    display: flex;
+    gap: 42px;
+    justify-content: space-between;
+  }
+}
+
+@media (min-width: @tablet-width) and (max-width: @desctop-width) {
+  .example__wrapper-data {
+    background-color: @base-color;
+  }
+}
+
+
+@media (min-width: @desctop-width) {
+  .example__wrapper {
+    background-color: @base-color;
+  }
+
+  .example__wrapper-data-desctop {
+    background-color: @example-color;
+  }
 }
