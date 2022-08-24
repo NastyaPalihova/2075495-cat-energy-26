@@ -1,8 +1,8 @@
 .main-header {
   background-color: @base-color;
-  padding: 10px 20px;
   display: flex;
   flex-direction: column;
+  border-bottom: 1px solid @decorate-color;
 }
 
 @media (min-width: @tablet-width) {
@@ -23,7 +23,14 @@
 
 .main-header__wrapper-head {
   display: flex;
-  justify-content: space-between;
+  padding: 10px 0 0 20px;
+}
+
+@media (max-width: @mobile-width-only) {
+  .main-header__wrapper-head {
+    width: 55%;
+    justify-content: space-between;
+  }
 }
 
 .main-header__icon {
@@ -35,4 +42,5 @@
   min-width: 101px;
   min-height: 51px;
   padding-top: 10px;
+  position: relative;
 }

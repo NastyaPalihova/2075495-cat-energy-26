@@ -10,6 +10,7 @@
 .site-list {
   display: flex;
   flex-direction: column;
+  border-top: 1px solid @decorate-color;
 }
 
 @media (min-width: @tablet-width) {
@@ -32,8 +33,9 @@
 }
 
 .site-list__item {
-  margin: 0 auto;
   padding: 22px 0;
+  text-align: center;
+  border-bottom: 1px solid @decorate-color;
 }
 
 @media (max-width: @mobile-width-only) {

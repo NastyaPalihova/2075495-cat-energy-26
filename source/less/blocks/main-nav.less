@@ -1,5 +1,7 @@
 .main-nav {
   background-color: @base-color;
+  min-height: 66px;
+  width: auto;
 }
 
 .main-nav__list--closed {
@@ -7,9 +9,69 @@
 }
 
 .main-nav__toggle {
-  min-width: 24px;
-  min-height: 16px;
+  min-width: 55px;
+  min-height: 55px;
+  position: absolute;
+  z-index: 2;
+  right: 20px;
+  top: 10px;
+  cursor: pointer;
+  border: none;
+  background-color: @base-color;
 }
+
+.main-nav--closed .main-nav__toggle::after {
+  content: "";
+  position: absolute;
+  top: 17px;
+  left: 13px;
+  width: 24px;
+  height: 2px;
+  background-color: @text-color;
+  box-shadow: 0 8px 0 0 @text-color, 0 16px 0 0 @text-color;
+}
+
+.main-nav--closed .main-nav__toggle:hover {
+  background-color: fade(@text-color, 10%);
+}
+
+.main-nav--closed .main-nav__toggle:active::after {
+  background-color: fade(@text-color, 30%);
+  box-shadow: 0 8px 0 0 fade(@text-color, 30%), 0 16px 0 0 fade(@text-color, 30%);
+}
+
+.main-nav--opened .main-nav__toggle {
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 25px;
+    left: 13px;
+    width: 28px;
+    height: 2px;
+    background-color: @text-color;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+    box-shadow: none;
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+
+  &:active::before,
+  &:active::after {
+    background-color: fade(@text-color, 30%);
+  }
+
+  &:hover {
+    background-color: fade(@text-color, 10%);
+  }
+}
+
+
 
 @media (min-width: @tablet-width) {
   .main-nav__toggle {
