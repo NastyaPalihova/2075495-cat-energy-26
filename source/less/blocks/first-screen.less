@@ -1,17 +1,25 @@
-.first-screen {
-  background-image: linear-gradient(
-    hsl(97 53% 47% / 85%),
-    hsl(97 53% 47% / 85%)
-  ),
-    url("../img/index-background-cat.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  min-width: 320px;
-  max-height: 302px;
+.first-screen__wrapper {
+  padding: 27px 27px 0 27px;
 }
 
-.first-screen__wrapper {
-  padding: 27px 21px 27px 21px;
+@media (max-width: @mobile-width-only) {
+  .first-screen::before {
+    content: "";
+    display: block;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    background-image: linear-gradient(
+      hsl(97 53% 47% / 85%),
+      hsl(97 53% 47% / 85%)
+    ),
+      url("../img/index-background-cat.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    min-height: 302px;
+    z-index: -2;
+  }
 }
 
 @media (min-width: @tablet-width) and (max-width: @desctop-width) {
