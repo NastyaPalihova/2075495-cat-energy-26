@@ -20,6 +20,14 @@
   background-color: @base-color;
 
   @media (min-width: @tablet-width) {
+    .main-nav__toggle {
+      display: none;
+  }
+  }
+}
+
+@media (min-width: @desctop-width) {
+  .main-nav__toggle {
     display: none;
   }
 }
@@ -75,7 +83,6 @@
   }
 }
 
-
 @media (max-width: @mobile-width-only) {
   .main-nav--closed .site-list__item {
     display: none;
@@ -110,11 +117,5 @@
   .main-nav--nojs .site-list__item-link--current {
     padding-right: 70px;
     padding-left: 70px;
-  }
-}
-
-@media (min-width: @tablet-width) {
-  .main-nav__toggle {
-    display: none;
   }
 }
