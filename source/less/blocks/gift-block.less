@@ -1,5 +1,5 @@
 .gift-block {
-  padding: 35px 20px;
+  margin: 0 20px 25px 20px;
   background-image: linear-gradient(
     hsl(97 53% 47% / 85%),
     hsl(97 53% 47% / 85%)
@@ -9,6 +9,26 @@
   background-size: cover;
   min-width: 280px;
   min-height: 290px;
+}
+
+.gift-block__description {
+  font-family: "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  color: @base-color;
+  margin-left: 57px;
+  margin-right: 57px;
+  text-align: center;
+}
+
+.gift-block::before {
+  content: "";
+  display: block;
+  height: 169px;
+  width: 320px;
+  background-image: url(../img/gift.svg);
+  background-position: 94px 50px;
+  background-repeat: no-repeat;
 }
 
 @media (min-width: @tablet-width) {
@@ -24,12 +44,3 @@
   }
 }
 
-.gift-block__description {
-  font-family: "Arial", sans-serif;
-  font-size: 16px;
-  line-height: 20px;
-  color: @base-color;
-  margin-top: 48px;
-  margin-left: 60px;
-  margin-right: 60px;
-}

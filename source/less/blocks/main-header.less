@@ -2,7 +2,6 @@
   background-color: transparent;
   display: flex;
   flex-direction: column;
-  border-bottom: 1px solid @decorate-color;
 }
 
 .main-header__icon {
@@ -37,6 +36,12 @@
   .main-header__wrapper {
     gap: 20px;
     padding: 25px 30px;
+  }
+}
+
+@media (min-width: @desctop-width) {
+  .main-header__wrapper {
+    padding: 53px 110px;;
   }
 }
 

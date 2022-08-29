@@ -3,6 +3,8 @@
   display: flex;
   flex-direction: column;
   max-width: 279px;
+  position: relative;
+  border-bottom: 1px solid @decorate-color;
 }
 
 .show-more__title {
@@ -11,6 +13,32 @@
   font-size: 16px;
   line-height: 20px;
   text-align: center;
+  margin-top: 36px;
+  margin-bottom: 8px;
+
+}
+
+.show-more__title::before {
+  content: "";
+  position: absolute;
+  display: block;
+  height: 2px;
+  width: 30px;
+  background-color: @decorate-color;
+  top: 20px;
+  left: 145px;
+}
+
+.show-more__title::after {
+  content: "";
+  position: absolute;
+  display: block;
+  height: 2px;
+  width: 30px;
+  background-color: @decorate-color;
+  top: 20px;
+  left: 145px;
+  transform: rotate(90deg);
 }
 
 .show-more__description {
@@ -19,6 +47,7 @@
   line-height: 16px;
   text-align: center;
   margin-bottom: 30px;
+  margin-top: 0;
 }
 
 .show-more__button {

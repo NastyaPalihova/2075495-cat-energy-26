@@ -70,20 +70,24 @@
     min-height: 280px;
   }
 
+  .advantages__wrapper {
+    padding: 0 30px;
+  }
+
   // тут почему-то цифры не ставятся на свое место, нужна помощь
-  // .advantages__item::after {
-  //   counter-increment: li;
-  //   content: counter(li, decimal);
-  //   font-weight: inherit;
-  //   color: #f2f2f2;
-  //   z-index: -1;
-  //   font-size: 282px;
-  //   line-height: 200px;
-  //   display: flex;
-  //   width: 150px;
-  //   padding: 0;
-  //   margin: 0;
-  // }
+  .advantages__item::after {
+    counter-increment: li;
+    content: counter(li, decimal);
+    font-weight: inherit;
+    color: #f2f2f2;
+    z-index: -1;
+    font-size: 282px;
+    line-height: 200px;
+    display: flex;
+    width: 150px;
+    padding: 0;
+    margin: 0;
+  }
 
   .advantages__description {
     font-size: 16px;
@@ -104,5 +108,9 @@
   .advantages__list {
     display: flex;
     column-gap: 94px;
+  }
+
+  .advantages__wrapper {
+    padding: 0 110px;
   }
 }

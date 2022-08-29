@@ -7,8 +7,9 @@
   font-size: 16px;
   line-height: 20px;
   text-transform: uppercase;
-  max-width: 101px;
+  max-width: 98px;
   margin: 0;
+  font-weight: 400;
 }
 
 .catalog-card__wrapper-inner {
@@ -22,21 +23,26 @@
 .catalog-card__image {
   grid-row-start: 1;
   grid-row-end: 3;
+  margin-left: 36px;
 }
 
 @media (min-width: @tablet-width) {
   .catalog-card__wrapper-inner {
     display: flex;
     flex-direction: column;
-    padding: 0 78px;
   }
 
   .catalog-card__title {
-    order: 0;
+    order: 2;
+    max-width: 103px;
+    text-align: center;
+    padding: 0 78px;
   }
 
   .catalog-card__image {
     order: 1;
+    margin-left: 20px;
+    padding: 0 78px;
   }
 
   .catalog-card__table {
