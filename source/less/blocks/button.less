@@ -13,6 +13,10 @@
   color: @base-color;
 }
 
+.extra__item  .button--order {
+  margin: 0;
+}
+
 .button--form {
   padding: 10px 94px;
   background-color: @button-color;
@@ -29,8 +33,12 @@
 }
 
 @media (min-width: @tablet-width) {
-  .button {
-    font-size: 20px;
-    line-height: 20px;
+
+  .button--order {
+    margin-bottom: 39px;
+    margin-left: 17px;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    padding: 10px 84px;
   }
 }

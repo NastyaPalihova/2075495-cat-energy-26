@@ -1,8 +1,8 @@
 .extra {
-  padding: 25px 20px;
+  padding: 0 20px;
   position: relative;
+  margin-bottom: 36px;
 }
-
 
 .extra__title {
   font-size: 24px;
@@ -16,11 +16,15 @@
   content: "";
   display: block;
   position: absolute;
-  top: 40px;
+  top: 13px;
   right: 0;
   height: 2px;
   width: 53px;
   background-color: @button-color;
+}
+
+.extra__item .button--order {
+  margin: 0;
 }
 
 .extra__item-title {
@@ -49,6 +53,22 @@
 }
 
 @media (min-width: @tablet-width) {
+  .extra {
+    padding: 0 30px;
+    margin-bottom: 69px;
+  }
+
+  .extra__item {
+    border: 1px solid #E6E6E6;
+    border-collapse: collapse;
+  }
+
+  .extra__item-title {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 20px;
+  }
+
   .extra-list {
     display: grid;
     grid-template-columns: 708px;
@@ -57,19 +77,77 @@
 
   .extra__item-wrapper {
     display: grid;
-    grid-template-columns: 316px 316px;
+    grid-template-columns: 407px 225px;
     grid-template-rows: 40px 40px;
+    row-gap: 25px;
+    padding: 26px 38px;
   }
 
-  .button--order {
-    grid-column-start: 1;
-    grid-column-end: 3;
+  .extra__title {
+    font-size: 36px;
+    line-height: 1;
+    margin-bottom: 80px;
+    margin-left: 47px;
   }
+
+  .extra__title::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 13px;
+    left: 0;
+    height: 2px;
+    width: 30px;
+    background-color: @button-color;
+  }
+
+  .extra__title::after {
+    width: 328px;
+  }
+
 }
 
+// не получается расставить элементы с нужными расстояниями
 @media (min-width: @desctop-width) {
-  .extra__wrapper-desctop {
+  .extra {
+    padding: 0 111px;
+  }
+
+  .extra__title {
+    margin-left: 0;
+  }
+
+  .extra__title::before {
+    width: 70px;
+  }
+
+  .extra__title::after {
+    width: 967px;
+  }
+
+  .extra__wrapper {
+    position: relative;
+  }
+
+  .extra__item-wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding: 14px 0;
+  }
+
+  .extra__item-wrapper-part {
     display: flex;
     gap: 80px;
+  }
+
+  .extra__list {
+    width: 70%;
+  }
+
+  .extra__item {
+    border: none;
+    border-bottom: 1px solid #E6E6E6;
+    border-top: 1px solid #E6E6E6;
+    padding: 0;
   }
 }

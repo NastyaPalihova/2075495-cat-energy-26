@@ -52,8 +52,6 @@
   }
 }
 
-
-
 @media (min-width: @desctop-width) {
   .site-list {
     flex-direction: row;
@@ -62,15 +60,17 @@
     margin: 0 auto;
     }
 
+  .site-list__item-link--index {
+    color: @base-color;
+  }
+
+  .site-list__item-link-index--curent {
+    border-bottom-color: @base-color;
+  }
 
   .site-list__item-link {
     font-size: 20px;
     line-height: 30px;
-    color: @base-color;
-  }
-
-  .site-list__item-link--current {
-    border-bottom-color: @base-color;
   }
 }
 

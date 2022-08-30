@@ -1,5 +1,6 @@
 .catalog__wrapper {
-  padding: 20px;
+  padding: 0 20px;
+  margin-bottom: 25px;
 }
 
 .catalog__title {
@@ -19,6 +20,7 @@
   .catalog__item {
     border-top: 1px solid @decorate-color;
     border-bottom: 1px solid @decorate-color;
+    gap: 60px;
   }
 
   .catalog__list {
@@ -34,17 +36,11 @@
 
   .catalog__wrapper {
     padding: 0 30px;
+    margin-bottom: 68px;
   }
 
   .catalog__list {
     gap: 60px;
-  }
-}
-
-@media (min-width: @tablet-width) {
-
-  .catalog__item {
-    background: linear-gradient(to bottom, @base-color 10%, @focus-color 10%);
   }
 }
 

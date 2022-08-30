@@ -42,7 +42,7 @@
 
 @media (min-width: @tablet-width) {
   .main-footer-adress__wrapper {
-    padding: 26px 70px;
+    padding: 60px 70px;
   }
 
   .main-footer-adress__map {
@@ -62,13 +62,30 @@
 
 
 @media (min-width: @desctop-width) {
-  .main-footer-adress__wrapper {
-    display: none;
+  .main-footer-adress__wrapper--catalog {
+    position: absolute;
+    width: 565px;
+    height: 198px;
+    background-color: @base-color;
+    padding: 0;
+    padding: 44px 0;
+    justify-content: space-evenly;
+    bottom: 95px;
+    left: 110px;
+  }
+
+  .main-footer-adress__wrapper--catalog {
+    max-height: 94px;
+  }
+
+  .main-footer-adress {
+    position: relative;
   }
 
   .main-footer-adress__map {
     min-width: 1440px;
     min-height: 400px;
+
   }
 }
 
