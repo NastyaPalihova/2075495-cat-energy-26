@@ -26,7 +26,7 @@
   display: block;
   height: 169px;
   width: 320px;
-  background-image: url(../img/gift.svg);
+  background-image: url("../img/gift.svg");
   background-position: 94px 50px;
   background-repeat: no-repeat;
 }
@@ -47,11 +47,10 @@
     background-position: 94px 60px;
     margin-right: 80px;
   }
-
 }
 
-@media (min-width: @tablet-width) and (max-width: @desctop-width - 1) {
-    .gift-block__description {
+@media (min-width: @tablet-width) and (max-width: (@desctop-width - 1)) {
+  .gift-block__description {
     text-align: left;
     margin-top: 71px;
     max-width: 161px;

@@ -57,31 +57,48 @@
       <div class="form__info-programm-wrapper">
         <fieldset class="form__cat-info">
           <div class="form__cat-info-wrapper">
-            <legend class="visually-hidden">Информация о коте</legend>
+            <div class="visually-hidden">Информация о коте</div>
 
-            <label class="form__cat-info-label" for="name">Имя:*</label>
-            <input class="form__cat-info-input" type="text" id="name" name="name" placeholder="Барсик">
+            <div class="form__cat-info-wrapper-inner">
+              <label class="form__cat-info-label" for="name">Имя:*</label>
+              <input class="form__cat-info-input form__cat-info-input-name" type="text" id="name" name="name"
+                placeholder="Барсик">
+            </div>
 
-            <label class="form__cat-info-label" for="weight">Вес (кг):*</label>
-            <input class="form__cat-info-input" type="number" id="weight" name="weight" placeholder="7">
+            <div class="form__cat-info-wrapper-inner">
+              <label class="form__cat-info-label" for="weight">Вес (кг):*</label>
+              <input class="form__cat-info-input form__cat-info-input-weight" type="number" id="weight" name="weight"
+                placeholder="7">
+            </div>
 
-            <label class="form__cat-info-label" for="age">Возраст (лет):</label>
-            <input class="form__cat-info-input" type="number" id="age" name="age" placeholder="7">
+            <div class="form__cat-info-wrapper-inner">
+
+              <label class="form__cat-info-label form__cat-info-label-age" for="age">Возраст (лет):</label>
+              <input class="form__cat-info-input form__cat-info-input-age" type="number" id="age" name="age"
+                placeholder="7">
+            </div>
           </div>
         </fieldset>
 
         <fieldset class="form__cat-programm">
           <div class="form__cat-programm-wrapper">
-            <legend class="visually-hidden">Цель</legend>
+            <div class="visually-hidden">Цель</div>
 
-            <input class="form__cat-programm-input" type="radio" id="loose" name="loose">
-            <label class="form__cat-programm-label" for="loose">Похудение</label>
+            <div class="form__cat-programm-wrapper-inner">
+              <input class="form__cat-programm-input" type="radio" id="loose" name="radio">
+              <label class="form__cat-programm-label" for="loose">Похудение</label>
+            </div>
 
-            <input class="form__cat-programm-input" type="radio" id="gain" name="gain">
-            <label class="form__cat-programm-label" for="gain">Набор массы</label>
+            <div class="form__cat-programm-wrapper-inner">
+              <input class="form__cat-programm-input" type="radio" id="gain" name="radio">
+              <label class="form__cat-programm-label" for="gain">Набор массы</label>
+            </div>
 
-            <input class="form__cat-programm-input" type="radio" id="dont-know" name="dont-know">
-            <label class="form__cat-programm-label" for="dont-know">Не знаю (Нужен ваш совет)</label>
+            <div class="form__cat-programm-wrapper-inner">
+              <input class="form__cat-programm-input" type="radio" id="dont-know" name="radio">
+              <label class="form__cat-programm-label" for="dont-know">Не знаю (Нужен ваш совет)</label>
+            </div>
+
           </div>
         </fieldset>
 
@@ -90,18 +107,25 @@
       <fieldset class="form__master-info">
         <legend class="form__master-info-legend form__legend">Контактные данные (владельца кота)</legend>
         <div class="form__master-info-wrapper">
-          <label class="form__master-info-label" for="email">E-mail:*</label>
-          <input class="form__master-info" type="email" id="email" name="email" placeholder="kuklachev@gmail.com">
 
-          <label class="form__master-info-label" for="phone">Телефон:*</label>
-          <input class="form__master-info" type="tel" id="phone" name="phone" placeholder="8 (960) 900-60-90">
+          <div class="form__master-info-wrapper-inner">
+            <label class="form__master-info-label" for="email">E-mail:*</label>
+            <input class="form__master-info-input form__master-info-input-email" type="email" id="email" name="email"
+              placeholder="kuklachev@gmail.com">
+          </div>
+
+          <div class="form__master-info-wrapper-inner">
+            <label class="form__master-info-label" for="phone">Телефон:*</label>
+            <input class="form__master-info-input form__master-info-input-phone" type="tel" id="phone" name="phone"
+              placeholder="8 (960) 900-60-90">
+          </div>
 
         </div>
       </fieldset>
 
       <fieldset class="form__more-info">
         <legend class="form__more-info-legend form__legend">Комментарий</legend>
-        <input class="form__more-info" type="text" id="text" name="text"
+        <input class="form__more-info-input" type="text" id="text" name="text"
           placeholder="Расскажите обо всех повадках кота">
       </fieldset>
 
@@ -132,11 +156,11 @@
       <small class="form__note">* — Обязательные поля</small>
     </form>
   </main>
-  <footer class="main-footer">
+  <footer class="main-footer main-footer--form">
     <div class="main-footer__wrapper">
       <h2 class="visually-hidden">Наш адрес</h2>
       <div class="main-footer-adress">
-        <div class="main-footer-adress__wrapper">
+        <div class="main-footer-adress__wrapper main-footer-adress__wrapper--map">
           <b class="main-footer-adress__title">Приглашаем<br> к сотрудничеству дилеров!</b>
           <div class="main-footer-adress-description__wrapper">
             <p class="main-footer-adress__description">ул. Большая<br> Конюшенная, д. 19/8</p>
@@ -145,7 +169,7 @@
         </div>
         <iframe class="main-footer-adress__map"
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037999040354!2d30.322010416394033!3d59.938716271971415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2sBolshaya+Konyushennaya+ul.%2C+19%2C+Sankt-Peterburg%2C+Russia%2C+191186!5e0!3m2!1sen!2s!4v1441888483426"
-          min-width="320" min-height="362" allowfullscreen
+          width="320" height="362" allowfullscreen
           title="Офис компании по адресу набережная реки Карповки, 5, литера П, Санкт-Петербург"></iframe>
       </div>
       <div class="main-footer__ending">
