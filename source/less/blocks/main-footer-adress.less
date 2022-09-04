@@ -1,5 +1,5 @@
 .main-footer-adress__title {
-  font-style: 16px;
+  font-size: 16px;
   line-height: 20px;
   text-transform: uppercase;
   max-width: 170px;
@@ -7,9 +7,13 @@
 
 .main-footer-adress__wrapper {
   display: flex;
-  padding: 26px 20px;
+  padding: 34px 24px 34px 24px;
   column-gap: 20px;
   justify-content: space-between;
+}
+
+.main-footer-adress__wrapper--catalog {
+  background-color: @focus-color;
 }
 
 .main-footer-adress__description {
@@ -20,31 +24,62 @@
   max-height: 40px;
 }
 
-.main-footer-adress-description__wrapper {
+.main-footer-adress__description-wrapper {
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
 
-@media (min-width: @desctop-width) {
+.main-footer-adress__map {
+  display: block;
+  border: none;
+  width: 100%;
+  min-height: 362px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+@media (min-width: @tablet-width) {
   .main-footer-adress__wrapper {
-    display: none;
+    padding: 60px 70px;
+  }
+
+  .main-footer-adress__map {
+    min-width: 768px;
+    min-height: 400px;
+  }
+
+  .main-footer-adress__title {
+    font-size: 20px;
+    line-height: 26px;
+  }
+
+  .main-footer-adress__description {
+    font-size: 16px;
   }
 }
 
-/* не работает почему-то :( */
-@media (min-width: @tablet-width) {
-  .main-footer-adress__image {
-    display: none;
+
+@media (min-width: @desctop-width) {
+  .main-footer-adress__wrapper--map {
+    position: absolute;
+    width: 565px;
+    height: 198px;
+    background-color: @base-color;
+    padding: 44px 0;
+    justify-content: space-evenly;
+    bottom: 95px;
+    left: 110px;
+    max-height: 94px;
   }
 
-  .main-footer-adress__wrapper {
-    padding: 26px 70px;
+  .main-footer-adress {
+    position: relative;
   }
 
-  .main-footer-adress__image--tablet {
-    background-image: url("../img/location-tablet.jpg");
-    min-width: 768px;
+  .main-footer-adress__map {
+    min-width: 1440px;
     min-height: 400px;
   }
 }

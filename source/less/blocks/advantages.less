@@ -1,18 +1,55 @@
 .advantages__title {
   font-size: 36px;
   line-height: 40px;
-  margin-bottom: 40px;
+  margin: 0;
+  padding-bottom: 40px;
+  padding-top: 20px;
 }
 
 .advantages__description {
   font-size: 14px;
   line-height: 18px;
   font-family: "Arial", sans-serif;
-  margin-left: 20px;
+  margin-left: 80px;
+}
+
+.advantages__item::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background-color: @button-color;
+  background-image: url("../img/health.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.advantages__item-use::before {
+  background-image: url("../img/use.svg");
+}
+
+.advantages__item-eat::before {
+  background-image: url("../img/eat.svg");
+}
+
+.advantages__item-result::before {
+  background-image: url("../img/result.svg");
 }
 
 .advantages__wrapper {
   padding: 0 20px;
+}
+
+.advantages__list {
+  margin-top: 40px;
+  margin-left: 80px;
+  position: relative;
+  padding-bottom: 49px;
+}
+
+.advantages__item {
+  margin-bottom: 27px;
 }
 
 @media (min-width: @tablet-width) {
@@ -21,6 +58,48 @@
     grid-template-columns: 250px 250px;
     grid-template-rows: 280px 280px;
     column-gap: 135px;
+    row-gap: 36px;
+  }
+
+  .advantages__title {
+    font-size: 60px;
+    line-height: 1;
+  }
+
+  .advantages__item {
+    min-height: 280px;
+  }
+
+  .advantages__wrapper {
+    padding: 0 30px;
+  }
+
+  // тут почему-то цифры не ставятся на свое место, нужна помощь
+  .advantages__item::after {
+    counter-increment: li;
+    content: "" counter(li, decimal);
+    font-weight: inherit;
+    color: #f2f2f2;
+    z-index: -1;
+    font-size: 282px;
+    line-height: 200px;
+    display: flex;
+    width: 150px;
+    padding: 0;
+    margin: 0;
+  }
+
+  .advantages__description {
+    font-size: 16px;
+    line-height: 24px;
+    margin-left: 2px;
+    padding-top: 121px;
+  }
+
+  .advantages__item::before {
+    width: 80px;
+    height: 80px;
+    margin-top: 27px;
   }
 }
 
@@ -28,5 +107,9 @@
   .advantages__list {
     display: flex;
     column-gap: 94px;
+  }
+
+  .advantages__wrapper {
+    padding: 0 110px;
   }
 }

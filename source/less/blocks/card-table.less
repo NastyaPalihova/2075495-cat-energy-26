@@ -4,3 +4,27 @@
   line-height: 16px;
   color: @table-text-color;
 }
+
+.card-table__row {
+  display: flex;
+  justify-content: space-between;
+}
+
+@media (max-width: @mobile-width-only) {
+  .card-table__button {
+    margin-left: 36px;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .card-table__row {
+    border-bottom: 1px solid #cdcdcd;
+    z-index: 1;
+    padding: 8px 0;
+  }
+
+  .card-table {
+    font-size: 16px;
+    line-height: 16px;
+  }
+}

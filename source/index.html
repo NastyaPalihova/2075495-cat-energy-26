@@ -18,41 +18,46 @@
         <img class="main-header__logo-image" src="img/logo-title.svg" width="101" height="18"
           alt="Название Cat Energy.">
       </a>
-      <nav class="main-nav">
-        <button class="main-nav__toggle" type="button">
-          <span class="visually-hidden">Открыть меню</span>
-        </button>
+
     </div>
-    <div class="main-nav__wrapper">
-      <ul class="main-nav__list main-nav__list--closed site-list reset-list">
-        <li class="site-list__item site-list__item--current">
-          <a class="site-list__item-link" href="index.html">
-            Главная
-          </a>
-        </li>
-        <li class="site-list__item">
-          <a class="site-list__item-link" href="catalog.html">
-            Каталог продукции
-          </a>
-        </li>
-        <li class="site-list__item">
-          <a class="site-list__item-link" href="form.html">
-            Подбор программы
-          </a>
-        </li>
-      </ul>
-      </nav>
-    </div>
+
+    <nav class="main-nav main-nav--closed main-nav--nojs">
+      <button class="main-nav__toggle" type="button">
+        <span class="visually-hidden">Открыть меню</span>
+      </button>
+      <div class="main-nav__wrapper">
+        <ul class="main-nav__list main-nav__list--closed site-list reset-list">
+          <li class="site-list__item site-list__item--current">
+            <a class="site-list__item-link site-list__item-link--index site-list__item-link-index--current"
+              href="index.html">
+              Главная
+            </a>
+          </li>
+          <li class="site-list__item">
+            <a class="site-list__item-link site-list__item-link--index" href="catalog.html">
+              Каталог продукции
+            </a>
+          </li>
+          <li class="site-list__item">
+            <a class="site-list__item-link site-list__item-link--index" href="form.html">
+              Подбор программы
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
   </header>
 
   <main class="main-container">
     <section class="first-screen">
       <div class="first-screen__wrapper">
-        <h1 class="main-container__title">Функциональное<br>
-          питание для котов</h1>
-        <p class="main-container__description">Занялся собой? Займись котом!</p>
-        <img class="main-container__image" src="img/index-can.png" min-width="280" min-height="270"
-          alt="Упаковка Cat Energy.">
+        <div class="first-screen_wrapper-part">
+          <h1 class="main-container__title">Функциональное<br>
+            питание для котов</h1>
+          <p class="main-container__description">Занялся собой? Займись котом!</p>
+        </div>
+        <img class="main-container__image" src="img/index-can.png" width="280" height="270" alt="Упаковка Cat Energy.">
         <a class="main-container__button button button--main" href="catalog.html">Подобрать программу</a>
       </div>
     </section>
@@ -61,17 +66,23 @@
       <div class="preview__wrapper">
         <h2 class="visually-hidden">Список программ похудения.</h2>
         <ul class="preview__list reset-list">
-          <li class="preview__item">
-            <h3 class="preview__title">Похудение</h3>
-            <p class="preview__description">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям?
-              Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
-            <a class="button preview__slim" href="#">Каталог SLIM</a>
+          <li class="preview__item preview__item-slim">
+            <div class="preview__item-wrapper">
+              <h3 class="preview__title preview__title-slim">Похудение</h3>
+              <p class="preview__description">Ваш кот весит больше собаки и почти утратил способность лазить по
+                деревьям?
+                Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
+            </div>
+            <a class="button preview__slim" href="catalog.html">Каталог SLIM</a>
           </li>
-          <li class="preview__item">
-            <h3 class="preview__title">Набор массы</h3>
-            <p class="preview__description">Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro
-              поможет вашему коту нарастить необходимые мышцы!</p>
-            <a class="button preview__pro" href="#">Каталог PRO</a>
+          <li class="preview__item preview__item-pro">
+            <div class="preview__item-wrapper">
+              <h3 class="preview__title preview__title-pro">Набор массы</h3>
+              <p class="preview__description">Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy
+                Pro
+                поможет вашему коту нарастить необходимые мышцы!</p>
+            </div>
+            <a class="button preview__pro" href="catalog.html">Каталог PRO</a>
           </li>
         </ul>
       </div>
@@ -81,17 +92,17 @@
       <div class="advantages__wrapper">
         <h2 class="advantages__title">Как это работает</h2>
         <ul class="advantages__list reset-list">
-          <li class="advantages__item">
+          <li class="advantages__item advantages__item-health">
             <p class="advantages__description">Функциональное питание содержит только полезные питательные вещества.</p>
           </li>
-          <li class="advantages__item">
+          <li class="advantages__item advantages__item-use">
             <p class="advantages__description">Выпускается в виде порошка, который нужно лишь залить кипятком и готово.
             </p>
           </li>
-          <li class="advantages__item">
+          <li class="advantages__item advantages__item-eat">
             <p class="advantages__description">Замените один-два приема обычной еды на наше функциональное питание.</p>
           </li>
-          <li class="advantages__item">
+          <li class="advantages__item advantages__item-result">
             <p class="advantages__description">Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!</p>
           </li>
         </ul>
@@ -114,12 +125,12 @@
                 <dt class="example__number">5 кг</dt>
                 <dd class="example__meaning">снижение веса</dd>
               </div>
-              <div class="example__item">
+              <div class="example__item example__item-time">
                 <dt class="example__number">60 дней</dt>
                 <dd class="example__meaning">затрачено времени</dd>
               </div>
             </dl>
-            <p class="example__legend">Затраты на питание: 15 000 РУБ. </p>
+            <p class="example__legend">Затраты на питание: <span class="example__price">15 000 РУБ.</span></p>
           </div>
         </div>
         <img class="example__image" src="img/boris-before.png" width="280" height="232" alt="Кот Борис">
@@ -138,13 +149,15 @@
       <div class="main-footer-adress">
         <div class="main-footer-adress__wrapper">
           <b class="main-footer-adress__title">Приглашаем<br> к сотрудничеству дилеров!</b>
-          <div class="main-footer-adress-description__wrapper">
+          <div class="main-footer-adress__description-wrapper">
             <p class="main-footer-adress__description">ул. Большая<br> Конюшенная, д. 19/8</p>
             <p class="main-footer-adress__description">Санкт-Петербург</p>
           </div>
         </div>
-        <img class="main-footer-adress__image main-footer-adress__image--tablet" src="img/location.jpg" width="320"
-          height="362" alt="Расположение Cat Energy на карте.">
+        <iframe class="main-footer-adress__map"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037999040354!2d30.322010416394033!3d59.938716271971415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2sBolshaya+Konyushennaya+ul.%2C+19%2C+Sankt-Peterburg%2C+Russia%2C+191186!5e0!3m2!1sen!2s!4v1441888483426"
+          width="320" height="362" allowfullscreen
+          title="Офис компании по адресу набережная реки Карповки, 5, литера П, Санкт-Петербург"></iframe>
       </div>
       <div class="main-footer__ending">
         <div class="main-footer__logo">
@@ -180,6 +193,7 @@
       </div>
     </div>
   </footer>
+  <script src="js/script.js"></script>
 </body>
 
 </html>

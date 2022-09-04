@@ -13,10 +13,12 @@
   color: @base-color;
 }
 
+
 .button--form {
-  padding: 10px 94px;
+  padding: 10px 78px;
   background-color: @button-color;
   color: @base-color;
+  margin-bottom: 21px;
 }
 
 .button--show-more {
@@ -26,4 +28,14 @@
 .button--main {
   background-color: @button-color;
   color: @base-color;
+}
+
+@media (min-width: @tablet-width) {
+  .button--order {
+    margin-bottom: 39px;
+    margin-left: 17px;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    padding: 10px 84px;
+  }
 }

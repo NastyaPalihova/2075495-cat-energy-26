@@ -1,16 +1,38 @@
 .main-footer__logo-image {
-  padding: 39px 96px;
+  padding: 39px 76px 32px 76px;
 }
 
 .main-footer__ending {
   background-color: @focus-color;
   display: flex;
   flex-direction: column;
+  padding: 0 20px;
+}
+
+.main-footer__academy {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.main-footer--form {
+  background-color: @focus-color;
 }
 
 @media (min-width: @tablet-width) {
   .main-footer__ending {
     flex-direction: row;
     justify-content: space-between;
+    padding: 58px 30px 50px 30px;
+  }
+
+  .main-footer__logo-image {
+    padding-left: 13px;
+  }
+}
+
+@media (min-width: @desctop-width) {
+  .main-footer__ending {
+    padding: 55px 110px;
   }
 }
