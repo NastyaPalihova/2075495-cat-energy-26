@@ -9,6 +9,14 @@
   background-size: cover;
   min-width: 280px;
   min-height: 290px;
+
+  @media (min-resolution: 2dppx) {
+    background-image: linear-gradient(
+      hsl(97 53% 47% / 85%),
+      hsl(97 53% 47% / 85%)
+    ),
+      url("../img/gift-cat@2px.jpg");
+  }
 }
 
 .gift-block__description {
@@ -41,6 +49,14 @@
       hsl(97 53% 47% / 85%)
     ),
       url("../img/gift-cat-tablet.png");
+
+    @media (min-resolution: 2dppx) {
+      background-image: linear-gradient(
+        hsl(97 53% 47% / 85%),
+        hsl(97 53% 47% / 85%)
+      ),
+        url("../img/gift-cat-tablet@2x.png");
+    }
   }
 
   .gift-block::before {
@@ -69,6 +85,14 @@
       hsl(97 53% 47% / 85%),
       hsl(97 53% 47% / 85%)
     ),
-      url("../img/gift-cat.jpg");
+      url("../img/gift-cat-desktop.png");
+
+    @media (min-resolution: 2dppx) {
+      background-image: linear-gradient(
+        hsl(97 53% 47% / 85%),
+        hsl(97 53% 47% / 85%)
+      ),
+        url("../img/gift-cat-desktop@2x.png");
+    }
   }
 }

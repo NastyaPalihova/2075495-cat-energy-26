@@ -19,6 +19,14 @@
     width: 100%;
     min-height: 302px;
     z-index: -2;
+
+    @media (min-resolution: 2dppx) {
+      background-image: linear-gradient(
+        hsl(97 53% 47% / 85%),
+        hsl(97 53% 47% / 85%)
+      ),
+        url("../img/index-background-cat@2x.jpg");
+    }
   }
 }
 
@@ -40,22 +48,30 @@
     background-position: right;
     min-width: 720px;
     max-height: 694px;
+  }
 
-    .first-screen_wrapper-part::before {
-      position: absolute;
-      content: "";
-      width: 50%;
-      height: 694px;
-      top: 0;
-      right: 0;
+  .first-screen_wrapper-part::before {
+    position: absolute;
+    content: "";
+    width: 50%;
+    height: 694px;
+    top: 0;
+    right: 0;
+    background-image: linear-gradient(
+      hsl(97 53% 47% / 85%),
+      hsl(97 53% 47% / 85%)
+    ),
+      url("../img/index-background-desktop.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+
+    @media (min-resolution: 2dppx) {
       background-image: linear-gradient(
         hsl(97 53% 47% / 85%),
         hsl(97 53% 47% / 85%)
       ),
-        url("../img/index-background-desktop.jpg");
-      background-repeat: no-repeat;
-      background-size: cover;
-      z-index: -1;
+        url("../img/index-background-desktop@2x.jpg");
     }
   }
 
