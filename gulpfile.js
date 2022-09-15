@@ -10,6 +10,7 @@ import svgo from 'gulp-svgmin';
 import svgstore from 'gulp-svgstore';
 import rename from 'gulp-rename';
 import { deleteAsync } from 'del';
+import terser from 'gulp-terser';
 
 // Styles
 export const styles = () => {
@@ -29,6 +30,13 @@ export const styles = () => {
   .pipe(htmlmin({collapseWhitespace: true}))
   .pipe(gulp.dest('build'));
 }
+
+// scripts
+  export const scripts = () => {
+    return gulp.src('source/js/*.js')
+    .pipe(terser())
+    .pipe(gulp.dest('build/js'))
+  }
 
 // images
   const optimizeImages = () => {
@@ -122,6 +130,7 @@ export const build = gulp.series(
     html,
     svg,
     sprite,
+    scripts,
     createWebp
   ),
 );
@@ -131,14 +140,14 @@ export default gulp.series(
   copy,
   copyImages,
   gulp.parallel(
-  svg,
-  sprite,
-  optimizeImages,
-  html,
-  styles,
-  createWebp
-),
-gulp.series(
-  server,
-  watcher
+    svg,
+    sprite,
+    scripts,
+    html,
+    styles,
+    createWebp
+  ),
+  gulp.series(
+    server,
+    watcher
 ));

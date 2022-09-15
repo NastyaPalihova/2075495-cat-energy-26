@@ -7,6 +7,7 @@
 .main-header__icon {
   min-width: 34px;
   min-height: 38px;
+  padding-top: 7px;
 }
 
 .main-header__logo {
@@ -23,7 +24,11 @@
 
 .main-header__wrapper-head {
   display: flex;
-  padding: 10px 0 0 20px;
+  padding: 3px 0 0 20px;
+}
+
+.main-header__logo-image {
+  padding-top: 10px;
 }
 
 @media (min-width: @tablet-width) {
@@ -51,7 +56,7 @@
 
 @media (max-width: @mobile-width-only) {
   .main-header__wrapper-head {
-    width: 55%;
+    width: 60%;
     justify-content: space-between;
   }
 }

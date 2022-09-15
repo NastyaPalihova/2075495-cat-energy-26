@@ -20,6 +20,7 @@
 .main-header__icon {
   min-width: 34px;
   min-height: 38px;
+  padding-top: 7px;
 }
 .main-header__logo {
   min-width: 101px;
@@ -33,7 +34,10 @@
 }
 .main-header__wrapper-head {
   display: flex;
-  padding: 10px 0 0 20px;
+  padding: 3px 0 0 20px;
+}
+.main-header__logo-image {
+  padding-top: 10px;
 }
 @media (min-width: 768px) {
   .main-header {
@@ -56,7 +60,7 @@
 }
 @media (max-width: 767px) {
   .main-header__wrapper-head {
-    width: 55%;
+    width: 60%;
     justify-content: space-between;
   }
 }
@@ -92,8 +96,8 @@
 .main-nav--closed .main-nav__toggle::after {
   content: "";
   position: absolute;
-  top: 17px;
-  left: 13px;
+  top: 12px;
+  left: 30px;
   width: 24px;
   height: 2px;
   background-color: #000000;
@@ -182,7 +186,7 @@
   font-family: inherit;
   font-size: 14px;
   line-height: 18px;
-  padding: 7px 44px;
+  padding: 12px 44px;
   display: flex;
   margin: 0 auto;
   justify-content: space-around;
@@ -283,8 +287,8 @@
   font-size: 36px;
   line-height: 40px;
   margin: 0;
-  padding-bottom: 40px;
-  padding-top: 20px;
+  padding-bottom: 23px;
+  letter-spacing: -1px;
 }
 .advantages__description {
   font-size: 14px;
@@ -316,13 +320,13 @@
   padding: 0 20px;
 }
 .advantages__list {
-  margin-top: 40px;
+  margin-top: 56px 0;
   margin-left: 80px;
   position: relative;
   padding-bottom: 49px;
 }
 .advantages__item {
-  margin-bottom: 27px;
+  margin-bottom: 26px;
 }
 @media (min-width: 768px) {
   .advantages__list {
@@ -401,6 +405,7 @@
 .button--main {
   background-color: #68b738;
   color: #ffffff;
+  font-size: 14px;
 }
 @media (min-width: 768px) {
   .button--order {
@@ -423,6 +428,7 @@
   line-height: 40px;
   margin: 0;
   margin-bottom: 40px;
+  letter-spacing: -1px;
 }
 .example__description {
   font-family: "Arial", sans-serif;
@@ -552,7 +558,8 @@
   font-size: 24px;
   line-height: 37px;
   margin: 0;
-  padding-left: 71px;
+  padding-left: 72px;
+  letter-spacing: -1px;
 }
 .preview__slim {
   text-decoration: none;
@@ -577,7 +584,7 @@
   background-color: #f2f2f2;
   padding: 30px;
   padding-left: 17px;
-  margin: 20px;
+  margin: 20px 20px 0 23px;
   position: relative;
 }
 .preview__title-slim::before {
@@ -1400,7 +1407,7 @@
   }
 }
 .first-screen__wrapper {
-  padding: 27px 27px 0 27px;
+  padding: 27px 21px 0 21px;
 }
 @media (max-width: 767px) {
   .first-screen::before {
