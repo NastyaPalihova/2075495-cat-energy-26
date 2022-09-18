@@ -1,3 +1,7 @@
+.advantages {
+  margin-bottom: 54px;
+}
+
 .advantages__title {
   font-size: 36px;
   line-height: 40px;
@@ -11,6 +15,7 @@
   line-height: 18px;
   font-family: "Arial", sans-serif;
   margin-left: 80px;
+  margin-top: 16px;
 }
 
 .advantages__item::before {
@@ -57,13 +62,16 @@
     display: grid;
     grid-template-columns: 250px 250px;
     grid-template-rows: 280px 280px;
-    column-gap: 135px;
+    column-gap: 132px;
     row-gap: 36px;
   }
 
   .advantages__title {
     font-size: 60px;
     line-height: 1;
+    padding-top: 15px;
+    letter-spacing: -2px;
+    padding-bottom: 46px;
   }
 
   .advantages__item {
@@ -106,7 +114,8 @@
 @media (min-width: @desctop-width) {
   .advantages__list {
     display: flex;
-    column-gap: 94px;
+    column-gap: 121px;
+    max-height: 280px;
   }
 
   .advantages__wrapper {

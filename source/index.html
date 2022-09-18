@@ -72,8 +72,7 @@
             width="552" height="499">
           <source media="(min-width: 768px)" srcset="img/index-can-tablet@1x.png 1x, img/index-can-tablet@2x.png 2x"
             width="709" height="609">
-          <img class="main-container__image" srcset="img/index-can.png 1x, img/index-can@2x.png 2x" width="280"
-            height="270" alt="Упаковка Cat Energy.">
+          <img class="main-container__image" src="img/index-can.png" srcset="img/index-can.png 1x, img/index-can@2x.png 2x" width="280" height="270" alt="Упаковка Cat Energy.">
         </picture>
         <a class="main-container__button button button--main" href="catalog.html">Подобрать программу</a>
       </div>
@@ -120,7 +119,7 @@
             <p class="advantages__description">Замените один-два приема обычной еды на наше функциональное питание.</p>
           </li>
           <li class="advantages__item advantages__item-result">
-            <p class="advantages__description">Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!</p>
+            <p class="advantages__description">Уже через месяц наслаждайтесь изменениями к лучшему<br> вашего питомца!</p>
           </li>
         </ul>
       </div>
@@ -132,7 +131,7 @@
         <div class="example__wrapper-data">
           <h2 class="example__title">Живой пример</h2>
           <p class="example__description">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy
-            Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит
+            Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и<br> по-прежнему спит
             по
             16 часов в день.</p>
           <div class="example__list-tablet">
@@ -147,16 +146,37 @@
                 <dd class="example__meaning">затрачено времени</dd>
               </div>
             </dl>
-            <p class="example__legend">Затраты на питание: <span class="example__price">15 000 РУБ.</span></p>
+            <div class="example__legend-wrapper">
+            <p class="example__legend">Затраты на питание:</p>
+            <span class="example__price">15 000 РУБ.</span>
+          </div>
           </div>
         </div>
-        <img class="example__image" src="img/boris-before.png" width="280" height="232" alt="Кот Борис">
-        <div class="example__changes changes">
-          <label for="range">Было</label>
-          <input class="changes__range" type="range" id="range" name="range" min="0" max="100">
-          <label for="range">Стало</label>
+
+        <div class="example__range">
+          <div class="example__range-toggle">
+            <button type="button" class="example__range-button"></button>
+          </div>
+
+          <div class="example__range-image">
+          <picture>
+          <source media="(min-width: @tablet-width)" srcset="img/boris-before-tablet@1x.png 1x, img/boris-before-tablet@2x.png 2x"
+            width="560" height="512">
+            <img class="example__range-image--before" src="img/boris-before@1x.png" alt="Кот Борис до Cat Energy." width="280" height="256">
+          </picture>
         </div>
+
+        <div class="example__range-image">
+          <picture>
+            <source media="(min-width: @tablet-width)" srcset="img/boris-after-tablet@1x.png 1x, img/boris-after-tablet@2x.png 2x"
+            width="560" height="512">
+            <img class="example__range-image--after" src="img/boris-after@1x.png" alt="Кот Борис после Cat Energy." width="280" height="256">
+          </picture>
+        </div>
+
       </div>
+      </div>
+
     </section>
   </main>
 
@@ -171,7 +191,7 @@
             <p class="main-footer-adress__description">Санкт-Петербург</p>
           </div>
         </div>
-        <iframe class="main-footer-adress__map"
+         <iframe class="main-footer-adress__map"
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037999040354!2d30.322010416394033!3d59.938716271971415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2sBolshaya+Konyushennaya+ul.%2C+19%2C+Sankt-Peterburg%2C+Russia%2C+191186!5e0!3m2!1sen!2s!4v1441888483426"
           width="320" height="362" allowfullscreen
           title="Офис компании по адресу набережная реки Карповки, 5, литера П, Санкт-Петербург"></iframe>
