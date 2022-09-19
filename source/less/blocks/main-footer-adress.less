@@ -9,12 +9,13 @@
 .main-footer-adress__wrapper {
   display: flex;
   padding: 28px 22px 25px 23px;
-  column-gap: 20px;
+  column-gap: 7px;
   justify-content: space-between;
 }
 
 .main-footer-adress__wrapper--catalog {
   background-color: @focus-color;
+  padding: 20px 22px 17px 23px;
 }
 
 .main-footer-adress__description {
@@ -31,6 +32,10 @@
   min-width: 137px;
 }
 
+.main-footer-adress__description-wrapper--catalog {
+  margin-top: 11px;
+}
+
 .main-footer-adress__map {
   display: block;
   border: none;
@@ -40,10 +45,16 @@
   margin-right: auto;
 }
 
+.main-footer-adress__title--catalog {
+  min-width: 132px;
+  margin-top: 9px;
+  margin-left: -2px;
+  letter-spacing: 0;
+}
 
 @media (min-width: @tablet-width) {
   .main-footer-adress__wrapper {
-    padding: 60px 70px;
+    padding: 48px 70px 59px 70px;
   }
 
   .main-footer-adress__map {

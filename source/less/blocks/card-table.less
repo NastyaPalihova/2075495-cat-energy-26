@@ -3,16 +3,30 @@
   font-size: 12px;
   line-height: 16px;
   color: @table-text-color;
+  order: 4;
+  margin-left: 143px;
 }
 
 .card-table__row {
   display: flex;
   justify-content: space-between;
+  min-width: 150px;
 }
 
 @media (max-width: @mobile-width-only) {
   .card-table__button {
-    margin-left: 36px;
+    padding: 10px 109px;
+    margin-bottom: 7px;
+  }
+
+  .card-table {
+    margin-bottom: 31px;
+    margin-left: 140px;
+  }
+
+  .card-table__row {
+    min-width: 137px;
+    margin-top: -2px;
   }
 }
 

@@ -1,5 +1,5 @@
 .advantages {
-  margin-bottom: 54px;
+  padding-bottom: 12px;
 }
 
 .advantages__title {
@@ -69,7 +69,7 @@
   .advantages__title {
     font-size: 60px;
     line-height: 1;
-    padding-top: 15px;
+    padding-top: 3px;
     letter-spacing: -2px;
     padding-bottom: 46px;
   }
@@ -80,10 +80,18 @@
 
   .advantages__wrapper {
     padding: 0 30px;
+    position: relative;
   }
 
-  // тут почему-то цифры не ставятся на свое место, нужна помощь
+  .advantages {
+    counter-reset: li;
+    margin-bottom: 0;
+    padding-bottom: 33px;
+    border-bottom: 1px solid @decorate-color;
+  }
+
   .advantages__item::after {
+    position: absolute;
     counter-increment: li;
     content: "" counter(li, decimal);
     font-weight: inherit;
@@ -97,11 +105,31 @@
     margin: 0;
   }
 
+  .advantages__item-health::after {
+    top: 25px;
+    left: 118px;
+  }
+
+  .advantages__item-use::after {
+    top: 25px;
+    right: 62px;
+  }
+
+  .advantages__item-eat::after {
+    bottom: 51px;
+    left: 113px;
+  }
+
+  .advantages__item-result::after {
+    bottom: 51px;
+    right: 62px;
+  }
+
   .advantages__description {
     font-size: 16px;
     line-height: 24px;
-    margin-left: 2px;
-    padding-top: 121px;
+    margin-left: 1px;
+    padding-top: 122px;
   }
 
   .advantages__item::before {
@@ -114,11 +142,32 @@
 @media (min-width: @desctop-width) {
   .advantages__list {
     display: flex;
-    column-gap: 121px;
+    column-gap: 3px;
     max-height: 280px;
+  }
+
+  .advantages {
+    border-bottom: none;
+    padding-bottom: 54px;
   }
 
   .advantages__wrapper {
     padding: 0 110px;
+  }
+
+  .advantages__description {
+    padding-right: 58px;
+  }
+
+  .advantages__item-use::after {
+    left: 435px;
+  }
+
+  .advantages__item-eat::after {
+    left: 764px;
+  }
+
+  .advantages__item-result::after {
+    right: -19px;
   }
 }

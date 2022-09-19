@@ -1,5 +1,5 @@
 .catalog-card__wrapper {
-  margin: 19px 15px;
+  margin: 13px 15px;
 }
 
 .catalog-card__title {
@@ -10,6 +10,7 @@
   max-width: 98px;
   margin: 0;
   font-weight: 400;
+  order: 1;
 }
 
 .catalog-card__wrapper-inner {
@@ -23,12 +24,32 @@
 .catalog-card__image {
   grid-row-start: 1;
   grid-row-end: 3;
+  order: 0;
+
 }
 
 @media (max-width: @mobile-width-only) {
   .catalog-card__image {
-    margin-left: 36px;
-    margin-top: 25px;
+    padding-left: 37px;
+    padding-top: 11px;
+  }
+
+  .catalog-card__wrapper-inner {
+    margin-bottom: -7px;
+    row-gap: 0;
+  }
+
+  .catalog-card__wrapper {
+    margin: 17px 15px 24px 15px;
+  }
+
+  .catalog-card__title {
+    margin-top: -5px;
+  }
+
+  .catalog-card__image--big {
+    padding-left: 28px;
+    padding-top: 5px;
   }
 }
 
@@ -37,30 +58,58 @@
     display: flex;
     flex-direction: column;
     row-gap: 21px;
+    margin-bottom: 0;
   }
 
   .catalog-card {
-    background: linear-gradient(to bottom, @base-color 10%, @focus-color 10%);
+    background: linear-gradient(to bottom, @base-color 21%, @focus-color 10%);
+    max-width: 324px;
+    padding-bottom: 26px;
   }
 
   .catalog-card__title {
     order: 2;
-    min-width: 130px;
+    min-width: 157px;
     text-align: center;
     font-size: 20px;
     line-height: 24px;
-    padding: 13px 70px 0 70px;
+    padding: 5px 70px 0 70px;
   }
 
   .catalog-card__image {
     order: 1;
-    margin-left: 20px;
-    padding: 0 78px;
+    padding: 57px 66px 0 66px;
+  }
+
+  .catalog-card__image--big {
+    padding: 27px 20px 0 61px;
+  }
+
+  .catalog-card__image-fish--big {
+    padding: 35px 66px 0 63px;
+  }
+
+  .catalog-card__image-buckwheat--big {
+    padding: 31px 21px 0 62px;
   }
 
   .catalog-card__table {
     order: 2;
     max-width: 250px;
-    margin: 0 19px 33px 19px;
+    margin: -8px 12px 33px 22px;
+  }
+}
+
+@media (min-width: @desctop-width) {
+  .catalog-card {
+    max-width: 245px;
+  }
+
+  .catalog-card__title {
+    padding: 8px 31px 0 31px;
+  }
+
+  .catalog-card__image {
+    padding: 50px 31px 0 29px;
   }
 }
