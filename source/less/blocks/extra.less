@@ -39,7 +39,7 @@
 .extra__item {
   border-bottom: 1px solid @decorate-color;
   border-top: 1px solid @decorate-color;
-  padding: 13px 0;
+  padding: 13px 0 18px 0;
 }
 
 .extra__table {
@@ -55,12 +55,13 @@
 @media (min-width: @tablet-width) {
   .extra {
     padding: 0 30px;
-    margin-bottom: 69px;
+    margin-bottom: 87px;
   }
 
   .extra__item {
     border: 1px solid #e6e6e6;
     border-collapse: collapse;
+    padding-bottom: 0;
   }
 
   .extra__item-title {
@@ -79,22 +80,28 @@
     display: grid;
     grid-template-columns: 407px 225px;
     grid-template-rows: 40px 40px;
-    row-gap: 25px;
-    padding: 26px 38px;
+    row-gap: 7px;
+    padding: 26px 38px 10px 38px;
+  }
+
+  .extra__item-wrapper-part {
+    display: flex;
+    min-width: 623px;
+    justify-content: space-between;
   }
 
   .extra__title {
     font-size: 36px;
     line-height: 1;
-    margin-bottom: 80px;
-    margin-left: 47px;
+    margin-bottom: 66px;
+    margin-left: 38px;
   }
 
   .extra__title::before {
     content: "";
     display: block;
     position: absolute;
-    top: 13px;
+    top: 21px;
     left: 0;
     height: 2px;
     width: 30px;
@@ -103,25 +110,26 @@
 
   .extra__title::after {
     width: 328px;
+    top: 21px;
   }
 }
 
-// не получается расставить элементы с нужными расстояниями
 @media (min-width: @desctop-width) {
-  .extra {
-    padding: 0 111px;
-  }
-
   .extra__title {
     margin-left: 0;
+    margin-bottom: 88px;
   }
 
   .extra__title::before {
     width: 70px;
+    top: 25px;
+    left: -80px;
   }
 
   .extra__title::after {
-    width: 967px;
+    width: 954px;
+    top: 25px;
+    right: -81px;
   }
 
   .extra__wrapper {
@@ -131,12 +139,13 @@
   .extra__item-wrapper {
     display: flex;
     justify-content: space-between;
-    padding: 14px 0;
+    padding: 17px 0;
   }
 
   .extra__item-wrapper-part {
     display: flex;
     gap: 80px;
+    min-width: 611px;
   }
 
   .extra__list {
@@ -148,5 +157,11 @@
     border-bottom: 1px solid #e6e6e6;
     border-top: 1px solid #e6e6e6;
     padding: 0;
+  }
+
+  .extra__item .button--order {
+    margin: 0;
+    min-width: 243px;
+    margin-left: 40px;
   }
 }

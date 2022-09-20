@@ -1,9 +1,13 @@
+.advantages {
+  padding-bottom: 12px;
+}
+
 .advantages__title {
   font-size: 36px;
   line-height: 40px;
   margin: 0;
-  padding-bottom: 40px;
-  padding-top: 20px;
+  padding-bottom: 23px;
+  letter-spacing: -1px;
 }
 
 .advantages__description {
@@ -11,6 +15,7 @@
   line-height: 18px;
   font-family: "Arial", sans-serif;
   margin-left: 80px;
+  margin-top: 16px;
 }
 
 .advantages__item::before {
@@ -42,14 +47,14 @@
 }
 
 .advantages__list {
-  margin-top: 40px;
+  margin-top: 56px 0;
   margin-left: 80px;
   position: relative;
   padding-bottom: 49px;
 }
 
 .advantages__item {
-  margin-bottom: 27px;
+  margin-bottom: 26px;
 }
 
 @media (min-width: @tablet-width) {
@@ -57,13 +62,16 @@
     display: grid;
     grid-template-columns: 250px 250px;
     grid-template-rows: 280px 280px;
-    column-gap: 135px;
+    column-gap: 132px;
     row-gap: 36px;
   }
 
   .advantages__title {
     font-size: 60px;
     line-height: 1;
+    padding-top: 3px;
+    letter-spacing: -2px;
+    padding-bottom: 46px;
   }
 
   .advantages__item {
@@ -72,10 +80,18 @@
 
   .advantages__wrapper {
     padding: 0 30px;
+    position: relative;
   }
 
-  // тут почему-то цифры не ставятся на свое место, нужна помощь
+  .advantages {
+    counter-reset: li;
+    margin-bottom: 0;
+    padding-bottom: 33px;
+    border-bottom: 1px solid @decorate-color;
+  }
+
   .advantages__item::after {
+    position: absolute;
     counter-increment: li;
     content: "" counter(li, decimal);
     font-weight: inherit;
@@ -89,11 +105,31 @@
     margin: 0;
   }
 
+  .advantages__item-health::after {
+    top: 25px;
+    left: 118px;
+  }
+
+  .advantages__item-use::after {
+    top: 25px;
+    right: 62px;
+  }
+
+  .advantages__item-eat::after {
+    bottom: 51px;
+    left: 113px;
+  }
+
+  .advantages__item-result::after {
+    bottom: 51px;
+    right: 62px;
+  }
+
   .advantages__description {
     font-size: 16px;
     line-height: 24px;
-    margin-left: 2px;
-    padding-top: 121px;
+    margin-left: 1px;
+    padding-top: 122px;
   }
 
   .advantages__item::before {
@@ -106,10 +142,32 @@
 @media (min-width: @desctop-width) {
   .advantages__list {
     display: flex;
-    column-gap: 94px;
+    column-gap: 3px;
+    max-height: 280px;
+  }
+
+  .advantages {
+    border-bottom: none;
+    padding-bottom: 54px;
   }
 
   .advantages__wrapper {
     padding: 0 110px;
+  }
+
+  .advantages__description {
+    padding-right: 58px;
+  }
+
+  .advantages__item-use::after {
+    left: 435px;
+  }
+
+  .advantages__item-eat::after {
+    left: 764px;
+  }
+
+  .advantages__item-result::after {
+    right: -19px;
   }
 }

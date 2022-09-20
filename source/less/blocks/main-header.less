@@ -7,6 +7,7 @@
 .main-header__icon {
   min-width: 34px;
   min-height: 38px;
+  padding-top: 7px;
 }
 
 .main-header__logo {
@@ -23,7 +24,11 @@
 
 .main-header__wrapper-head {
   display: flex;
-  padding: 10px 0 0 20px;
+  padding: 3px 0 0 20px;
+}
+
+.main-header__logo-image {
+  padding-top: 10px;
 }
 
 @media (min-width: @tablet-width) {
@@ -38,6 +43,15 @@
     padding: 25px 30px;
   }
 
+  .main-header__wrapper-head {
+    padding: 0;
+    width: 174px;
+  }
+
+  .main-header__icon {
+    padding-top: 0;
+  }
+
   .main-header__logo-image {
     display: none;
   }
@@ -45,13 +59,14 @@
 
 @media (min-width: @desctop-width) {
   .main-header__wrapper {
-    padding: 53px 110px;
+    padding: 53px 110px 18px 110px;
+    margin-bottom: 52px;
   }
 }
 
 @media (max-width: @mobile-width-only) {
   .main-header__wrapper-head {
-    width: 55%;
+    width: 60%;
     justify-content: space-between;
   }
 }

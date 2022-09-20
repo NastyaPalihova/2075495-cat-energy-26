@@ -1,12 +1,57 @@
 .form {
   padding: 0 20px;
   margin-bottom: 32px;
+  padding-top: 6px;
 }
 
 .form__title {
   font-size: 36px;
   line-height: 36px;
   margin-bottom: 36px;
+  letter-spacing: -1px;
+}
+
+.form__cat-programm-input {
+  position: absolute;
+  width: 72px;
+  height: 57px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.form__cat-programm-label {
+  position: relative;
+  display: block;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 43px;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: #222222;
+}
+
+.form__cat-programm-label::before {
+  content: "";
+  position: absolute;
+  display: block;
+  top: 6px;
+  left: 0;
+  width: 30px;
+  height: 30px;
+  padding: 8px;
+  border: 1px solid #cdcdcd;
+  border-radius: 50%;
+}
+
+.form__cat-programm-input:checked {
+  background-color: #68b738;
+  background-clip: content-box;
 }
 
 .form__description {
@@ -50,7 +95,7 @@
   font-size: 16px;
   line-height: 18px;
   padding: 0;
-  padding-top: 25px;
+  padding-top: 40px;
   padding-bottom: 20px;
   border: none;
   border-top: 1px solid #d9d9d9;
@@ -101,10 +146,6 @@
   display: flex;
   justify-content: space-between;
   margin-bottom: 14px;
-}
-
-.form__cat-programm-label {
-  padding-left: 15px;
 }
 
 .form__master-info-label {

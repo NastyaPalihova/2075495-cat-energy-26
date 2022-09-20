@@ -3,7 +3,8 @@
   font-size: 24px;
   line-height: 37px;
   margin: 0;
-  padding-left: 71px;
+  padding-left: 72px;
+  letter-spacing: -1px;
 }
 
 .preview__slim {
@@ -12,6 +13,15 @@
   text-transform: uppercase;
   font-size: 16px;
   line-height: 16px;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+    cursor: pointer;
+  }
 }
 
 .preview__pro {
@@ -20,6 +30,15 @@
   text-transform: uppercase;
   font-size: 16px;
   line-height: 16px;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+    cursor: pointer;
+  }
 }
 
 
@@ -33,7 +52,7 @@
   background-color: @focus-color;
   padding: 30px;
   padding-left: 17px;
-  margin: 20px;
+  margin: 20px 20px 0 23px;
   position: relative;
 }
 
@@ -45,8 +64,8 @@
   display: block;
   width: 50px;
   height: 53px;
-  left: 22px;
-  top: 21px;
+  left: 19px;
+  top: 20px;
 }
 
 .preview__title-pro::before {
@@ -58,7 +77,7 @@
   width: 67px;
   height: 50px;
   left: 10px;
-  top: 14px;
+  top: 12px;
 }
 
 .preview__description {
@@ -86,7 +105,8 @@
   background-repeat: no-repeat;
   width: 24px;
   height: 12px;
-  margin-left: 15px;
+  margin-left: 17px;
+  margin-bottom: 2px;
 }
 
 .preview__item-wrapper {
@@ -101,14 +121,16 @@
 
 @media (min-width: @tablet-width) {
   .preview__item {
-    padding: 77px 53px;
-    margin: 30px;
+    padding: 72px 53px 70px 53px;
+    margin: -18px 30px 43px 30px;
   }
 
   .preview__description {
     max-width: 340px;
     font-size: 16px;
     line-height: 24px;
+    margin-top: 25px;
+    margin-bottom: 51px;
   }
 
   .preview__title {
@@ -134,7 +156,7 @@
     width: 200px;
     height: 211px;
     left: 446px;
-    top: 80px;
+    top: 79px;
   }
 
   .preview__title-pro::before {
@@ -142,7 +164,11 @@
     width: 268px;
     height: 200px;
     left: 412px;
-    top: 80px;
+    top: 84px;
+  }
+
+  .preview__item-pro {
+    margin-bottom: 28px;
   }
 }
 
@@ -156,19 +182,22 @@
   .preview__item {
     margin: 0;
     padding-left: 52px;
+    padding-right: 20px;
+    padding-top: 61px;
   }
 
   .preview__description {
     max-width: none;
     margin: 0;
+    margin-left: 31px;
   }
 
   .preview__wrapper {
-    padding: 82px 79px;
+    padding: 0 79px 61px 79px;
   }
 
   .preview__title {
-    padding-left: 162px;
+    padding-left: 194px;
     padding-bottom: 73px;
   }
 
@@ -176,16 +205,29 @@
     background-image: url("../img/cat-slim-desktop.svg");
     width: 100px;
     height: 106px;
-    top: 41px;
-    left: 52px;
+    top: 26px;
+    left: 81px;
   }
 
   .preview__title-pro::before {
     background-image: url("../img/cat-pro-desktop.svg");
     width: 134px;
     height: 100px;
-    top: 47px;
-    left: 33px;
+    top: 32px;
+    left: 63px;
+  }
+
+  .preview__slim {
+    padding: 11px 31px 11px 31px;
+  }
+
+  .preview__slim::after,
+  .preview__pro::after {
+    margin-left: 29px;
+  }
+
+  .preview__pro {
+    padding: 11px 31px 11px 31px;
   }
 
   .preview__item-wrapper {

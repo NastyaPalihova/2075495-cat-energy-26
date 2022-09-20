@@ -24,7 +24,7 @@
   font-family: inherit;
   font-size: 14px;
   line-height: 18px;
-  padding: 7px 44px;
+  padding: 12px 44px;
   display: flex;
   margin: 0 auto;
   justify-content: space-around;
@@ -39,6 +39,7 @@
     font-size: 20px;
     line-height: 20px;
     position: relative;
+    margin-left: 5px;
   }
 
   .main-container__button {
@@ -46,11 +47,11 @@
     font-family: inherit;
     font-size: 20px;
     line-height: 20px;
-    padding: 14px 0;
+    padding: 19px 0;
     min-width: 244px;
     position: absolute;
-    top: 378px;
-    left: 123px;
+    top: 368px;
+    left: 120px;
   }
 
   .main-container__image {
@@ -63,7 +64,7 @@
     display: flex;
     font-size: 60px;
     line-height: 60px;
-    margin-bottom: 45px;
+    margin-bottom: 38px;
   }
 }
 
@@ -80,11 +81,23 @@
 
 @media (min-width: @desctop-width) {
   .main-container__button {
-    margin-left: 64px;
-    margin-top: 50px;
+    margin-left: 69px;
+    margin-top: 83px;
   }
 
   .main-container__title {
     margin-bottom: 40px;
+  }
+
+  .main-container__description {
+    margin-left: 0;
+  }
+
+  .main-container__image {
+    display: block;
+    position: absolute;
+    top: 142px;
+    left: 556px;
+    margin-bottom: 12px;
   }
 }

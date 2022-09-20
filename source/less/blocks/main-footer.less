@@ -1,5 +1,15 @@
 .main-footer__logo-image {
   padding: 39px 76px 32px 76px;
+
+  &:hover {
+    opacity: 0.8;
+    cursor: pointer;
+  }
+
+  &:active {
+    opacity: 0.6;
+    cursor: pointer;
+  }
 }
 
 .main-footer__ending {
@@ -19,11 +29,15 @@
   background-color: @focus-color;
 }
 
+.main-footer__ending--catalog {
+  margin-top: 8px;
+}
+
 @media (min-width: @tablet-width) {
   .main-footer__ending {
     flex-direction: row;
     justify-content: space-between;
-    padding: 58px 30px 50px 30px;
+    padding: 19px 31px 50px 17px;
   }
 
   .main-footer__logo-image {
@@ -33,6 +47,6 @@
 
 @media (min-width: @desctop-width) {
   .main-footer__ending {
-    padding: 55px 110px;
+    padding: 11px 93px;
   }
 }
