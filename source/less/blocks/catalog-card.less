@@ -102,7 +102,12 @@
 
 @media (min-width: @desctop-width) {
   .catalog-card {
-    max-width: 245px;
+    max-width: 244px;
+    min-height: 511px;
+  }
+
+  .catalog-card__table {
+    margin: -8px 12px 24px 25px;
   }
 
   .catalog-card__title {
@@ -111,5 +116,17 @@
 
   .catalog-card__image {
     padding: 50px 31px 0 29px;
+  }
+
+  .catalog-card__image--big {
+    padding: 19px 21px 0 25px;
+  }
+
+  .catalog-card__wrapper {
+    margin: 13px 15px -19px 15px;
+  }
+
+  .catalog-card__wrapper-inner {
+    row-gap: 25px;
   }
 }

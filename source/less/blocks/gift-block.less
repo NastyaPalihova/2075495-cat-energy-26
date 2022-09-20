@@ -74,14 +74,16 @@
   }
 }
 
+// почему-то этот блок шире 245px, хотя я задала max-width
 @media (min-width: @desctop-width) {
   .gift-block {
     min-height: 289px;
-    max-width: 246px;
+    margin-right: 34px;
+    max-width: 245px;
     display: block;
     position: absolute;
-    top: 111px;
-    right: 62px;
+    top: 117px;
+    right: -16px;
     background-image: linear-gradient(
       hsl(97 53% 47% / 85%),
       hsl(97 53% 47% / 85%)

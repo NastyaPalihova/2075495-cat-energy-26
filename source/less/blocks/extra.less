@@ -114,22 +114,22 @@
   }
 }
 
-// не получается расставить элементы с нужными расстояниями
 @media (min-width: @desctop-width) {
-  .extra {
-    padding: 0 111px;
-  }
-
   .extra__title {
     margin-left: 0;
+    margin-bottom: 88px;
   }
 
   .extra__title::before {
     width: 70px;
+    top: 25px;
+    left: -80px;
   }
 
   .extra__title::after {
-    width: 967px;
+    width: 954px;
+    top: 25px;
+    right: -81px;
   }
 
   .extra__wrapper {
@@ -139,12 +139,13 @@
   .extra__item-wrapper {
     display: flex;
     justify-content: space-between;
-    padding: 14px 0;
+    padding: 17px 0;
   }
 
   .extra__item-wrapper-part {
     display: flex;
     gap: 80px;
+    min-width: 611px;
   }
 
   .extra__list {
@@ -156,5 +157,11 @@
     border-bottom: 1px solid #e6e6e6;
     border-top: 1px solid #e6e6e6;
     padding: 0;
+  }
+
+  .extra__item .button--order {
+    margin: 0;
+    min-width: 243px;
+    margin-left: 40px;
   }
 }
