@@ -55,7 +55,7 @@
 @media (min-width: @tablet-width) {
   .extra {
     padding: 0 30px;
-    margin-bottom: 87px;
+    margin-bottom: 76px;
   }
 
   .extra__item {
@@ -81,7 +81,7 @@
     grid-template-columns: 407px 225px;
     grid-template-rows: 40px 40px;
     row-gap: 7px;
-    padding: 26px 38px 10px 38px;
+    padding: 11px 34px 26px 38px;
   }
 
   .extra__item-wrapper-part {
@@ -93,7 +93,7 @@
   .extra__title {
     font-size: 36px;
     line-height: 1;
-    margin-bottom: 66px;
+    margin-bottom: 80px;
     margin-left: 38px;
   }
 
@@ -115,21 +115,25 @@
 }
 
 @media (min-width: @desctop-width) {
+  .extra {
+    margin-bottom: 87px;
+  }
+
   .extra__title {
     margin-left: 0;
-    margin-bottom: 88px;
+    margin-bottom: 82px;
   }
 
   .extra__title::before {
     width: 70px;
-    top: 25px;
-    left: -80px;
+    top: 23px;
+    left: -110px;
   }
 
   .extra__title::after {
     width: 954px;
-    top: 25px;
-    right: -81px;
+    top: 24px;
+    right: -108px;
   }
 
   .extra__wrapper {
@@ -139,17 +143,19 @@
   .extra__item-wrapper {
     display: flex;
     justify-content: space-between;
-    padding: 17px 0;
+    padding: 15px 0 10px 0;
+    align-items: flex-start;
   }
 
   .extra__item-wrapper-part {
     display: flex;
     gap: 80px;
     min-width: 611px;
+    padding-top: 9px;
   }
 
   .extra__list {
-    width: 70%;
+    width: 73%;
   }
 
   .extra__item {

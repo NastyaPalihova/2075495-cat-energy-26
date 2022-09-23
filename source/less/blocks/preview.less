@@ -120,7 +120,6 @@
 
 .preview__item-slim {
   margin-bottom: 31px;
-
 }
 
 @media (min-width: @tablet-width) {
@@ -245,5 +244,26 @@
 
   .preview__item-wrapper {
     margin-bottom: 26px;
+  }
+}
+
+@media (max-width: @mobile-width-only) {
+  .preview__item-pro {
+    margin-bottom: 22px;
+    padding-top: 34px;
+  }
+
+  .preview__item-slim {
+    margin-bottom: 22px;
+    padding-top: 28px;
+  }
+
+  .preview__title-pro::before {
+    left: 10px;
+    top: 26px;
+  }
+
+  .preview__description {
+    margin-bottom: 22px;
   }
 }
