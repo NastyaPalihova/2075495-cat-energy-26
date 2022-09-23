@@ -1,6 +1,6 @@
 .example__wrapper {
   background-color: @example-color;
-  padding-bottom: 40px;
+  padding-bottom: 46px;
 }
 
 .example__wrapper-data {
@@ -250,7 +250,9 @@
     font-size: 20px;
     max-width: 174px;
     margin: 0;
-    margin-top: 10px;
+    margin-top: 11px;
+    margin-bottom: 5px;
+    margin-right: 1px;
   }
 
   .example__changes {
@@ -258,7 +260,7 @@
   }
 
   .example__range {
-    margin-top: 67px;
+    margin-top: 74px;
   }
 
   .example__list {
@@ -267,7 +269,7 @@
   }
 }
 
-@media (min-width: @tablet-width) and (max-width: @desctop-width) {
+@media (min-width: @tablet-width) and (max-width: (@desctop-width - 1)) {
   .example__wrapper-data {
     background-color: @base-color;
   }
@@ -298,13 +300,11 @@
 }
 
 @media (min-width: @desctop-width) {
-  .example {
-    background: linear-gradient(#ffffff 30%, #eaeaea 70%);
-  }
-
   .example__wrapper {
+    background: linear-gradient(#ffffff 23%, #f2f2f2 23%);
     background-color: @base-color;
     position: relative;
+    padding-bottom: 70px;
   }
 
   .example__wrapper-data-desctop {
@@ -347,7 +347,7 @@
 
   .example__range {
     position: absolute;
-    bottom: 116px;
+    bottom: 86px;
     right: 109px;
   }
 
@@ -356,7 +356,7 @@
   }
 
   .example__meaning {
-    background-color: @decorate-color;
+    background-color: #f2f2f2;
   }
 
   .example__legend-wrapper {
@@ -365,7 +365,7 @@
   }
 }
 
-@media (min-width: @mobile-width-only) {
+@media (max-width: @mobile-width-only) {
   .example__description br {
     display: none;
   }

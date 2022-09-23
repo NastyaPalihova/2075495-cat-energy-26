@@ -15,7 +15,7 @@
 
 .main-footer-adress__wrapper--catalog {
   background-color: @focus-color;
-  padding: 20px 22px 17px 23px;
+  padding: 20px 22px 25px 23px;
 }
 
 .main-footer-adress__description {
@@ -54,7 +54,7 @@
 
 @media (min-width: @tablet-width) {
   .main-footer-adress__wrapper {
-    padding: 48px 70px 59px 70px;
+    padding: 59px 70px 59px 70px;
   }
 
   .main-footer-adress__map {
@@ -82,21 +82,26 @@
 
 
 @media (min-width: @desctop-width) {
+  .main-footer-adress__wrapper {
+    padding: 61px 36px 57px 23px;
+  }
+
   .main-footer-adress__wrapper--catalog {
     position: absolute;
     content: "";
-    width: 565px;
-    height: 198px;
+    width: 506px;
     background-color: @base-color;
-    padding: 44px 0;
-    justify-content: space-evenly;
-    bottom: 95px;
+    bottom: 107px;
     left: 110px;
-    max-height: 94px;
   }
 
   .main-footer-adress {
     position: relative;
+  }
+
+  .main-footer-adress__title {
+    padding-left: 59px;
+    padding-bottom: 3px;
   }
 
   .main-footer-adress__map {
@@ -110,5 +115,7 @@
 
   .main-footer-adress__description {
     text-align: left;
+    margin-top: -2px;
+    margin-bottom: 4px;
   }
 }

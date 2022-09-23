@@ -1,5 +1,5 @@
 .advantages {
-  padding-bottom: 12px;
+  padding-bottom: 28px;
 }
 
 .advantages__title {
@@ -141,8 +141,9 @@
 
 @media (min-width: @desctop-width) {
   .advantages__list {
-    display: flex;
-    column-gap: 3px;
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    column-gap: 20px;
     max-height: 280px;
   }
 
@@ -169,5 +170,17 @@
 
   .advantages__item-result::after {
     right: -19px;
+  }
+
+  .advantages__title {
+    padding-bottom: 43px;
+    font-weight: 400;
+    letter-spacing: 0;
+  }
+}
+
+@media (max-width: @mobile-width-only) {
+  .advantages__description br {
+    display: none;
   }
 }

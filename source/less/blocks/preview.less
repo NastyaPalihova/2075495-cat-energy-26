@@ -19,7 +19,7 @@
   }
 
   &:active {
-    color: rgba(255, 255, 255, 0.3);
+    color: rgba(0, 0, 0, 0.3);
     cursor: pointer;
   }
 }
@@ -36,7 +36,7 @@
   }
 
   &:active {
-    color: rgba(255, 255, 255, 0.3);
+    color: rgba(0, 0, 0, 0.3);
     cursor: pointer;
   }
 }
@@ -50,8 +50,7 @@
 
 .preview__item {
   background-color: @focus-color;
-  padding: 30px;
-  padding-left: 17px;
+  padding: 30px 17px 17px 17px;
   margin: 20px 20px 0 23px;
   position: relative;
 }
@@ -116,7 +115,11 @@
 
 .preview__item-pro {
   padding-top: 19px;
-  margin-bottom: 10px;
+  margin-bottom: 24px;
+}
+
+.preview__item-slim {
+  margin-bottom: 33px;
 }
 
 @media (min-width: @tablet-width) {
@@ -143,6 +146,15 @@
   .preview__pro {
     font-size: 20px;
     line-height: 30px;
+  }
+
+  .preview__slim::after {
+    margin-left: 26px;
+  }
+
+  .preview__pro::after {
+    margin-left: 27px;
+    margin-bottom: 4px;
   }
 
   .preview__item-wrapper {
@@ -181,56 +193,52 @@
 
   .preview__item {
     margin: 0;
-    padding-left: 52px;
-    padding-right: 20px;
-    padding-top: 61px;
+    padding: 61px 52px 58px 52px;
   }
 
   .preview__description {
     max-width: none;
     margin: 0;
-    margin-left: 31px;
   }
 
   .preview__wrapper {
-    padding: 0 79px 61px 79px;
+    padding: 0 110px 70px 110px;
   }
 
   .preview__title {
-    padding-left: 194px;
-    padding-bottom: 73px;
+    padding-left: 160px;
+    padding-bottom: 75px;
+    padding-top: 16px;
   }
 
   .preview__title-slim::before {
     background-image: url("../img/cat-slim-desktop.svg");
     width: 100px;
     height: 106px;
-    top: 26px;
-    left: 81px;
+    top: 41px;
+    left: 53px;
   }
 
   .preview__title-pro::before {
     background-image: url("../img/cat-pro-desktop.svg");
     width: 134px;
     height: 100px;
-    top: 32px;
-    left: 63px;
+    top: 47px;
+    left: 31px;
   }
 
-  .preview__slim {
-    padding: 11px 31px 11px 31px;
+  .preview__slim,
+  .preview__pro {
+    display: flex;
   }
 
   .preview__slim::after,
   .preview__pro::after {
     margin-left: 29px;
-  }
-
-  .preview__pro {
-    padding: 11px 31px 11px 31px;
+    margin-top: 9px;
   }
 
   .preview__item-wrapper {
-    margin-bottom: 23px;
+    margin-bottom: 26px;
   }
 }

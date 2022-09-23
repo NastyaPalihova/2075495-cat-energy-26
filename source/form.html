@@ -9,6 +9,9 @@
 </head>
 
 <body class="page__body">
+  <div class="visually-hidden">
+    {% include "img/sprite.svg" %}
+  </div>
   <header class="main-header">
     <div class=" main-header__wrapper">
     <div class="main-header__wrapper-head">
@@ -187,37 +190,41 @@
           <h2 class="visually-hidden social__title">Давайте дружить!</h2>
           <ul class="social__list reset-list">
             <li class="social__item">
-              <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy">
+              <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy"
+                aria-label="Группа HTML Academy ВКонтакте.">
                 <span class="visually-hidden">Мы в Вконтакте.</span>
                 <svg class="social__icon-vkontakte" width="27" height="17">
-                  <use href="img/sprite.svg#vk"></use>
+                  <use xlink:href="#vk"></use>
                 </svg>
               </a>
             </li>
             <li class="social__item">
-              <a class="social__link social__link--youtube" href="https://www.youtube.com/user/htmlacademyru">
+              <a class="social__link social__link--youtube" href="https://www.youtube.com/user/htmlacademyru"
+                aria-label="Канал HTML Academy на Youtube.">
                 <span class="visually-hidden">Мы в Ютубе.</span>
                 <svg class="social__icon-youtube" width="28" height="22">
-                  <use href="img/sprite.svg#youtube"></use>
+                  <use xlink:href="#youtube"></use>
                 </svg>
               </a>
             </li>
             <li class="social__item">
-              <a class="social__link social__link--telegram" href="https://t.me/htmlacademy">
+              <a class="social__link social__link--telegram" href="https://t.me/htmlacademy"
+                aria-label="Канал HTML Academy в Телеграме.">
                 <span class="visually-hidden">Мы в Телеграме.</span>
                 <svg class="social__icon-telegram" width="28" height="22">
-                  <use href="img/sprite.svg#telegram"></use>
+                  <use xlink:href="#telegram"></use>
                 </svg>
               </a>
             </li>
           </ul>
         </div>
         <div class="main-footer__academy academy">
+
           <a class="academy__image" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Сайт HTML Academy.">
             <span class="academy__title">HTML Academy</span>
             <span class="visually-hidden">Перейти на сайт HTML Academy.</span>
             <svg class="academy__icon" width="27" height="34">
-              <use href="img/sprite.svg#academy"></use>
+              <use xlink:href="#academy"></use>
             </svg>
           </a>
         </div>

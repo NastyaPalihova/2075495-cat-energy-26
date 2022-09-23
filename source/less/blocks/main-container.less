@@ -39,7 +39,7 @@
     font-size: 20px;
     line-height: 20px;
     position: relative;
-    margin-left: 5px;
+    margin: 0 7px 19px 2px;
   }
 
   .main-container__button {
@@ -82,7 +82,8 @@
 @media (min-width: @desctop-width) {
   .main-container__button {
     margin-left: 69px;
-    margin-top: 83px;
+    margin-top: 85px;
+    padding-top: 18px;
   }
 
   .main-container__title {
@@ -99,5 +100,12 @@
     top: 142px;
     left: 556px;
     margin-bottom: 12px;
+  }
+}
+
+@media (min-width: @tablet-width) and (max-width: (@desctop-width - 1)) {
+  .main-container__button {
+    padding: 17px 0;
+    top: 370px;
   }
 }

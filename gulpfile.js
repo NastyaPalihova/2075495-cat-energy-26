@@ -11,6 +11,7 @@ import svgstore from 'gulp-svgstore';
 import rename from 'gulp-rename';
 import { deleteAsync } from 'del';
 import terser from 'gulp-terser';
+import nunjucks from 'gulp-nunjucks';
 
 // Styles
 export const styles = () => {
@@ -27,6 +28,7 @@ export const styles = () => {
 //html
   const html = () => {
   return gulp.src('source/*.html')
+  .pipe(nunjucks.compile())
   .pipe(htmlmin({collapseWhitespace: true}))
   .pipe(gulp.dest('build'));
 }
@@ -35,19 +37,19 @@ export const styles = () => {
   export const scripts = () => {
     return gulp.src('source/js/*.js')
     .pipe(terser())
-    .pipe(gulp.dest('build/js'))
+    .pipe(gulp.dest('build/js'));
   }
 
 // images
   const optimizeImages = () => {
   return gulp.src('source/img/**/*.{jpg,png}')
   .pipe(squoosh())
-  .pipe(gulp.dest('build/img'))
+  .pipe(gulp.dest('build/img'));
 }
 
 const copyImages = () => {
   return gulp.src('source/img/**/*.{jpg,png}')
-  .pipe(gulp.dest('build/img'))
+  .pipe(gulp.dest('build/img'));
 }
 
 // webP
@@ -74,7 +76,7 @@ const sprite = () => {
     inlineSvg: true
   }))
   .pipe(rename('sprite.svg'))
-  .pipe(gulp.dest('build/img'))
+  .pipe(gulp.dest('source/img'));
 }
 
 // copy
@@ -125,11 +127,11 @@ export const build = gulp.series(
   clean,
   copy,
   optimizeImages,
+  sprite,
   gulp.parallel(
     styles,
     html,
     svg,
-    sprite,
     scripts,
     createWebp
   ),
@@ -139,9 +141,9 @@ export default gulp.series(
   clean,
   copy,
   copyImages,
+  sprite,
   gulp.parallel(
     svg,
-    sprite,
     scripts,
     html,
     styles,

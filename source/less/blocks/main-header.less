@@ -25,11 +25,6 @@
   position: relative;
 }
 
-.main-header__wrapper {
-  display: flex;
-  justify-content: space-between;
-}
-
 .main-header__wrapper-head {
   display: flex;
   padding: 3px 0 0 20px;
@@ -41,7 +36,6 @@
 
 @media (min-width: @tablet-width) {
   .main-header {
-    flex-direction: row;
     justify-content: space-between;
     border: none;
   }
@@ -49,6 +43,8 @@
   .main-header__wrapper {
     gap: 20px;
     padding: 25px 30px;
+    display: flex;
+    justify-content: space-between;
   }
 
   .main-header__wrapper-head {
