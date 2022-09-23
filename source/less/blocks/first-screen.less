@@ -30,9 +30,13 @@
   }
 }
 
-@media (min-width: @tablet-width) and (max-width: @desctop-width) {
+@media (min-width: @tablet-width) and (max-width: (@desctop-width - 1)) {
   .first-screen__wrapper-part {
     padding-left: 94px;
+  }
+
+  .first-screen__wrapper {
+    padding-top: 25px;
   }
 }
 
