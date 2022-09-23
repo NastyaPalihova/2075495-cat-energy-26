@@ -76,6 +76,26 @@
   padding: 13px 13px 11px 13px;
   border: 1px solid #e7e7e7;
   font-family: "Oswald", "Arial", sans-serif;
+
+  &:hover {
+    border-color: #cdcdcd;
+  }
+
+  &:focus {
+    border-color: #444444;
+  }
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+input[type="number"],
+input[type="number"]:hover,
+input[type="number"]:focus {
+    appearance: none;
+    -moz-appearance: textfield;
 }
 
 .form__cat-info-input::placeholder {
@@ -132,6 +152,14 @@
   font-size: 16px;
   line-height: 18px;
   font-family: "Oswald", "Arial", sans-serif;
+
+  &:hover {
+    border-color: #cdcdcd;
+  }
+
+  &:focus {
+    border-color: #444444;
+  }
 }
 
 .form__more-info-input::placeholder {
@@ -174,6 +202,14 @@
   text-align: top;
   padding: 13px 15px 12px;
   font-family: "Oswald", "Arial", sans-serif;
+
+  &:hover {
+    border-color: #cdcdcd;
+  }
+
+  &:focus {
+    border-color: #444444;
+  }
 }
 
 .form__master-info-input-email {
@@ -227,6 +263,10 @@
   height: 23px;
   padding: 3px 3px 3px 3px;
   border: 1px solid #cdcdcd;
+
+  &:hover {
+    border-color: #bababa;
+  }
 }
 
 .form__extra-input:checked ~ .form__extra-label::before {
