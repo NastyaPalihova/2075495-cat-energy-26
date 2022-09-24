@@ -136,7 +136,7 @@ input[type="number"]:focus {
 .form__legend {
   font-size: 24px;
   line-height: 26px;
-  margin-bottom: 35px;
+  margin-bottom: 36px;
   max-width: 187px;
   margin-left: -3px;
 }
@@ -176,7 +176,8 @@ input[type="number"]:focus {
   position: relative;
   border: none;
   padding: 0;
-  margin-bottom: 17px;
+  margin: 0;
+  margin-bottom: 14px;
 }
 
 .form__more-info-input {
@@ -203,7 +204,7 @@ input[type="number"]:focus {
   line-height: 18px;
   color: @catalog-card-title;
   text-align: top;
-  padding: 13px 15px 12px;
+  padding: 6px 11px 4px;
 }
 
 .form__cat-programm-wrapper-inner {
@@ -346,15 +347,34 @@ input[type="number"]:focus {
 
 @media (min-width: @tablet-width) {
   .form {
-    padding: 0 70px;
+    padding: 0 59px 0 70px;
     margin-bottom: 54px;
   }
 
+  .form__button-wrapper {
+    display: flex;
+    align-items: center;
+  }
+
   .form__legend::after {
-    top: 23px;
+    top: 21px;
     right: -69px;
     height: 2px;
     width: 145px;
+  }
+
+  .form__master-info-input-email {
+    padding: 13px 20px 12px;
+  }
+
+  .form__master-info-input-icon {
+    right: 26px;
+  }
+
+  .form__more-info-input {
+    padding: 2px;
+    padding-left: 8px;
+    width: 97%;
   }
 
   .form__legend::before {
@@ -375,6 +395,10 @@ input[type="number"]:focus {
 
   .form__extra .form__legend::after {
     width: 444px;
+  }
+
+  .form__cat-info-wrapper-inner {
+    align-items: center;
   }
 
   .form__cat-info-input::placeholder {
@@ -411,6 +435,9 @@ input[type="number"]:focus {
     font-size: 20px;
     line-height: 30px;
     padding: 13px 13px 11px 20px;
+    margin-top: 41px;
+    min-height: 169px;
+    padding: 9px 14px 11px 18px;
   }
 
   .form__cat-info-input-number {
@@ -477,11 +504,6 @@ input[type="number"]:focus {
     margin-bottom: 59px;
   }
 
-  .form__more-info-input {
-    margin-top: 41px;
-    min-height: 169px;
-  }
-
   .form__more-info-input::placeholder {
     font-size: 20px;
     line-height: 30px;
@@ -513,6 +535,8 @@ input[type="number"]:focus {
     font-size: 16px;
     line-height: 16px;
     padding: 0 37px 0 59px;
+    margin-top: -26px;
+    margin-left: 3px;
   }
 }
 
@@ -522,7 +546,11 @@ input[type="number"]:focus {
     grid-template-columns: 221px 221px 221px 221px;
     grid-template-rows: 40px;
     column-gap: 104px;
-    padding-bottom: 43px;
+    padding-bottom: 40px;
+  }
+
+  .form__master-info-input-icon {
+    right: 21px;
   }
 
   .form {
@@ -592,7 +620,7 @@ input[type="number"]:focus {
 
   .form__extra .form__legend::after {
     width: 1078px;
-    top: 29px;
+    top: 26px;
     right: -111px;
     height: 2px;
   }
