@@ -76,14 +76,14 @@
 
             <div class="form__cat-info-wrapper-inner">
               <label class="form__cat-info-label" for="weight">Вес (кг):*</label>
-              <input class="form__cat-info-input form__cat-info-input-weight" type="number" id="weight" name="weight"
+              <input class="form__cat-info-input form__cat-info-input-number" type="number" id="weight" name="weight"
                 placeholder="7">
             </div>
 
             <div class="form__cat-info-wrapper-inner">
 
               <label class="form__cat-info-label form__cat-info-label-age" for="age">Возраст (лет):</label>
-              <input class="form__cat-info-input form__cat-info-input-age" type="number" id="age" name="age"
+              <input class="form__cat-info-input form__cat-info-input-number" type="number" id="age" name="age"
                 placeholder="7">
             </div>
           </div>
@@ -121,12 +121,18 @@
             <label class="form__master-info-label" for="email">E-mail:*</label>
             <input class="form__master-info-input form__master-info-input-email" type="email" id="email" name="email"
               placeholder="kuklachev@gmail.com">
+              <svg class="form__master-info-input-icon" width="17" height="13">
+                <use xlink:href="#icon-email"></use>
+              </svg>
           </div>
 
           <div class="form__master-info-wrapper-inner">
             <label class="form__master-info-label" for="phone">Телефон:*</label>
             <input class="form__master-info-input form__master-info-input-phone" type="tel" id="phone" name="phone"
               placeholder="8 (960) 900-60-90">
+              <svg class="form__master-info-input-icon form__master-info-input-icon-phone" width="20" height="21">
+                <use xlink:href="#icon-phone"></use>
+              </svg>
           </div>
 
         </div>
@@ -170,7 +176,7 @@
     <div class="main-footer__wrapper">
       <h2 class="visually-hidden">Наш адрес</h2>
       <div class="main-footer-adress main-footer-adress--catalog">
-        <div class="main-footer-adress__wrapper">
+        <div class="main-footer-adress__wrapper main-footer-adress__wrapper-form">
           <b class="main-footer-adress__title">Приглашаем<br> к сотрудничеству дилеров!</b>
           <div class="main-footer-adress__description-wrapper">
             <p class="main-footer-adress__description">ул. Большая<br> Конюшенная, д. 19/8</p>
