@@ -12,6 +12,15 @@ import rename from 'gulp-rename';
 import { deleteAsync } from 'del';
 import terser from 'gulp-terser';
 import nunjucks from 'gulp-nunjucks';
+import gh-pages from 'gulp-gh-pages';
+
+const ghPages = require('gh-pages');
+const path = require('path');
+
+function deploy(cb) {
+  ghPages.publish(path.join(process.cwd(), './build'), cb);
+}
+exports.deploy = deploy;
 
 // Styles
 export const styles = () => {
