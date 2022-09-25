@@ -30,7 +30,8 @@ export const styles = () => {
   return gulp.src('source/*.html')
   .pipe(nunjucks.compile())
   .pipe(htmlmin({collapseWhitespace: true}))
-  .pipe(gulp.dest('build'));
+  .pipe(gulp.dest('build'))
+  .pipe(browser.stream());
 }
 
 // scripts

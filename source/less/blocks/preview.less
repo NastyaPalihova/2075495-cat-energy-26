@@ -79,6 +79,17 @@
   top: 15px;
 }
 
+.preview__slim:hover::after,
+.preview__pro:hover::after {
+  transform: scaleX(1.34);
+  transform-origin: left;
+}
+
+.preview__slim::after,
+.preview__pro::after {
+  transition: transform, 0.25s, easy-in-out;
+}
+
 .preview__description {
   font-size: 14px;
   line-height: 18px;
