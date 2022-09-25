@@ -1,6 +1,6 @@
 .example__wrapper {
   background-color: @example-color;
-  padding-bottom: 40px;
+  padding-bottom: 46px;
 }
 
 .example__wrapper-data {
@@ -17,9 +17,10 @@
 }
 
 .example__description {
-  font-family: "Arial", sans-serif;
+  font-family: "Arial", "Helvetica", sans-serif;
   font-size: 14px;
   line-height: 18px;
+  margin-bottom: 18px;
 }
 
 .example__number {
@@ -27,25 +28,31 @@
   line-height: 24px;
   text-transform: uppercase;
   text-align: center;
-  margin-top: 18px;
-  margin-left: 5px;
+  position: relative;
+  padding: 15px 10px;
+  border: 1px solid @border-color;
+  border-radius: 3px;
 }
 
 .example__meaning {
   font-size: 12px;
   line-height: 12px;
-  font-family: "Arial", sans-serif;
-  margin: 0;
-  margin-top: 7px;
+  font-family: "Arial", "Helvetica", sans-serif;
   text-align: center;
-  padding-left: 20px;
-  padding-right: 20px;
+  display: inline-block;
+  vertical-align: top;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+  background-color: #eaeaea;
+  transform: translateY(-8px);
 }
 
 .example__list {
   display: flex;
   margin: 0;
-  gap: 25px;
+  justify-content: space-between;
 }
 
 .example__legend {
@@ -73,16 +80,10 @@
 }
 
 .example__item {
-  border: 1px solid @border-color;
-  border-radius: 5%;
+  width: calc(50% - 16px);
+  text-align: center;
 }
 
-.example__item-time {
-  padding-left: 20px;
-  padding-right: 20px;
-}
-
-// слайдер кота
 .example__range-image {
   max-width: 50%;
   height: auto;
@@ -182,31 +183,19 @@
 
 
 @media (min-width: @tablet-width) {
-  .example__list-tablet {
-    display: flex;
-    gap: 42px;
-    justify-content: space-between;
-  }
-
   .example__wrapper {
     background: linear-gradient(@base-color 57%, @example-color 43%);
     padding-bottom: 99px;
+  }
+
+  .example__stats {
+    display: flex;
   }
 
   .example__price {
     padding-left: 80px;
     padding-top: 5px;
     font-size: 20px;
-  }
-
-  .example__item-weight {
-    padding-left: 6px;
-    padding-right: 10px;
-  }
-
-  .example__item-time {
-    padding-left: 0;
-    padding-right: 0;
   }
 
   .example__title {
@@ -229,28 +218,30 @@
   .example__number {
     font-size: 30px;
     line-height: 37px;
-    margin: 13px;
-    max-width: 139px;
+    padding-bottom: 19px;
   }
 
   .example__meaning {
     font-size: 14px;
     line-height: 14px;
-    padding-left: 27px;
     background-color: @base-color;
-  }
-
-  .example__item-time .example__meaning {
-    padding: 0;
-    margin-left: 18px;
-    margin-right: 18px;
+    margin-left: 7px;
+    margin-right: 7px;
+    padding-left: 10px;
+    padding-right: 10px;
   }
 
   .example__legend {
     font-size: 20px;
     max-width: 174px;
     margin: 0;
-    margin-top: 10px;
+    margin-top: 11px;
+    margin-bottom: 5px;
+    margin-right: 1px;
+  }
+
+  .example__legend-wrapper {
+    margin-left: auto;
   }
 
   .example__changes {
@@ -258,16 +249,17 @@
   }
 
   .example__range {
-    margin-top: 67px;
+    margin-top: 74px;
   }
 
   .example__list {
     gap: 40px;
     max-height: 73px;
+    width: 366px;
   }
 }
 
-@media (min-width: @tablet-width) and (max-width: @desctop-width) {
+@media (min-width: @tablet-width) and (max-width: (@desctop-width - 1)) {
   .example__wrapper-data {
     background-color: @base-color;
   }
@@ -281,6 +273,7 @@
   .example__legend-wrapper {
     display: flex;
     margin-left: 46px;
+    margin-top: -10px;
   }
 
   .example__legend {
@@ -291,20 +284,14 @@
     margin-top: 19px;
     margin-left: 5px;
   }
-
-  .example__number {
-    margin-left: 29px;
-  }
 }
 
 @media (min-width: @desctop-width) {
-  .example {
-    background: linear-gradient(#ffffff 30%, #eaeaea 70%);
-  }
-
   .example__wrapper {
+    background: linear-gradient(#ffffff 23%, #f2f2f2 23%);
     background-color: @base-color;
     position: relative;
+    padding-bottom: 70px;
   }
 
   .example__wrapper-data-desctop {
@@ -339,33 +326,29 @@
     padding-top: 25px;
   }
 
-  .example__list-tablet {
-    flex-wrap: wrap;
-    max-width: 390px;
-    gap: 25px;
-  }
-
   .example__range {
     position: absolute;
-    bottom: 116px;
+    bottom: 86px;
     right: 109px;
   }
 
-  .example__number {
-    margin-top: 31px;
-  }
-
   .example__meaning {
-    background-color: @decorate-color;
+    background-color: #f2f2f2;
   }
 
   .example__legend-wrapper {
     display: flex;
-    margin-top: 20px;
+    margin-top: 31px;
+  }
+
+  .example__stats {
+    display: block;
+    width: 366px;
+    margin-top: 67px;
   }
 }
 
-@media (min-width: @mobile-width-only) {
+@media (max-width: @mobile-width-only) {
   .example__description br {
     display: none;
   }

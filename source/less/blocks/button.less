@@ -30,7 +30,7 @@
   padding: 10px 78px;
   background-color: @button-color;
   color: @base-color;
-  margin-bottom: 21px;
+  margin-bottom: 18px;
 
   &:hover {
     background-color: @hover-color;
@@ -72,21 +72,30 @@
     margin-left: 25px;
     grid-column-start: 1;
     grid-column-end: 3;
-    padding: 8px 93px;
+    padding: 10px 93px;
     min-width: 180px;
   }
 
   .button--main {
     font-size: 20px;
   }
+
+  .button--form {
+    font-size: 20px;
+    padding: 16px 65px;
+  }
 }
 
 @media (min-width: @desctop-width) {
   .button--order {
     margin-bottom: 0;
-    margin-top: 7px;
+    margin-top: 9px;
     margin-left: 25px;
-    padding: 8px 52px;
     min-width: 150px;
+    padding: 10px 52px;
+  }
+
+  .button--form {
+    padding: 16px 209px;
   }
 }

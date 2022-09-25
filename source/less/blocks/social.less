@@ -1,6 +1,6 @@
 .social {
   display: flex;
-  padding: 16px 74px;
+  padding: 20px 73px 15px 73px;
   border-bottom: 1px solid #d9d9d9;
   border-top: 1px solid #d9d9d9;
 }
@@ -11,9 +11,20 @@
   gap: 26px;
 }
 
-// .social__icon--vkontakte {
-//   fill: tomato;
-// }
+.social__icon-vkontakte,
+.social__icon-telegram,
+.social__icon-youtube {
+  fill: #666666;
+
+  &:hover {
+    fill: @button-color;
+  }
+
+  &:active {
+    fill: @button-color;
+    opacity: 0.3;
+  }
+}
 
 @media (min-width: @tablet-width) {
   .social {
@@ -32,5 +43,18 @@
 
   .social__icon-telegram {
     margin-left: -3px;
+  }
+}
+
+@media (min-width: @desctop-width) {
+  .social {
+    padding: 38px 0 38px 1px;
+  }
+}
+
+@media (max-width: @mobile-width-only) {
+  .social__icon-vkontakte {
+    margin-top: 4px;
+    margin-left: 1px;
   }
 }

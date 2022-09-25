@@ -6,9 +6,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Кэт энерджи</title>
   <link rel="stylesheet" href="css/style.css">
+  <link rel="preload" href="fonts/oswaldregular.woff2" as="font">
+  <link rel="preload" href="fonts/oswaldmedium.woff2" as="font">
+  <link rel="icon" href="favicon.ico">
+  <link rel="apple-touch-icon" sizes="152x152" href="img/favicons/favicon-152.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicons/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="img/favicons/favicon-16.png">
+  <link rel="manifest" href="manifest.webmanifest">
 </head>
 
 <body class="page__body">
+  <div class="visually-hidden">
+    {% include "img/sprite.svg" %}
+  </div>
   <header class="main-header">
     <div class="main-header__wrapper">
       <div class="main-header__wrapper-head">
@@ -72,7 +82,7 @@
               <dl class="catalog-card__table card-table">
                 <div class="card-table__row">
                   <dt class="card-table__data">Масса</dt>
-                  <dd class="card-table__data">500 г</dd>
+                  <dd class="card-table__data card-table__weight">500 г</dd>
                 </div>
                 <div class="card-table__row">
                   <dt class="card-table__data">Вкус</dt>
@@ -91,7 +101,7 @@
         <li class="catalog__item catalog-card">
           <div class="catalog-card__wrapper">
             <div class="catalog-card__wrapper-inner">
-              <h3 class="catalog-card__title">Cat Energy PRO 1000 г</h3>
+              <h3 class="catalog-card__title catalog-card__title--big">Cat Energy PRO 1000 г</h3>
               <picture>
                 <source media="(min-width: 768px)"
                   srcset="img/chicken-pro-1000-tablet@1x.png 1x, img/chicken-pro-1000-tablet@2x.png 2x" width="168"
@@ -103,7 +113,7 @@
               <dl class="catalog-card__table card-table">
                 <div class="card-table__row">
                   <dt class="card-table__data">Масса</dt>
-                  <dd class="card-table__data">1000 г</dd>
+                  <dd class="card-table__data card-table__weight">1000 г</dd>
                 </div>
                 <div class="card-table__row">
                   <dt class="card-table__data">Вкус</dt>
@@ -127,13 +137,14 @@
                 <source media="(min-width: 768px)"
                   srcset="img/fish-pro-500-tablet@1x.png 1x, img/fish-pro-500-tablet@2x.png 2x" width="163"
                   height="174">
-                <img class="catalog-card__image" src="img/fish-pro-500.png" srcset="img/fish-pro-500@2x.png 2x"
-                  width="68" height="86" alt="Упаковка Сat Energy PRO с рыбой 500 граммов.">
+                <img class="catalog-card__image catalog-card__image-second" src="img/fish-pro-500.png"
+                  srcset="img/fish-pro-500@2x.png 2x" width="68" height="86"
+                  alt="Упаковка Сat Energy PRO с рыбой 500 граммов.">
               </picture>
               <dl class="catalog-card__table card-table">
                 <div class="card-table__row">
                   <dt class="card-table__data">Масса</dt>
-                  <dd class="card-table__data">500 г</dd>
+                  <dd class="card-table__data card-table__weight">500 г</dd>
                 </div>
                 <div class="card-table__row">
                   <dt class="card-table__data">Вкус</dt>
@@ -152,19 +163,20 @@
         <li class="catalog__item catalog-card">
           <div class="catalog-card__wrapper">
             <div class="catalog-card__wrapper-inner">
-              <h3 class="catalog-card__title">Cat Energy PRO 1000 г</h3>
+              <h3 class="catalog-card__title catalog-card__title--big catalog-card__title--second">Cat Energy PRO 1000 г
+              </h3>
               <picture>
                 <source media="(min-width: 768px)"
                   srcset="img/fish-pro-1000-tablet@1x.png 1x, img/fish-pro-1000-tablet@2x.png 2x" width="168"
                   height="200">
-                <img class="catalog-card__image catalog-card__image--big catalog-card__image-fish-big"
-                  src="img/fish-pro-1000.png" srcset="img/fish-pro-1000@2x.png 2x" width="84" height="101"
+                <img class="catalog-card__image catalog-card__image--big" src="img/fish-pro-1000.png"
+                  srcset="img/fish-pro-1000@2x.png 2x" width="84" height="101"
                   alt="Упаковка Сat Energy PRO с рыбой 1000 граммов.">
               </picture>
               <dl class="catalog-card__table card-table">
                 <div class="card-table__row">
                   <dt class="card-table__data">Масса</dt>
-                  <dd class="card-table__data">1000 г</dd>
+                  <dd class="card-table__data card-table__weight">1000 г</dd>
                 </div>
                 <div class="card-table__row">
                   <dt class="card-table__data">Вкус</dt>
@@ -190,14 +202,14 @@
                   height="171">
 
 
-                <img class="catalog-card__image" src="img/buckwheat-slim-500.png"
+                <img class="catalog-card__image catalog-card__image-second" src="img/buckwheat-slim-500.png"
                   srcset="img/buckwheat-slim-500@2x.png 2x" width="68" height="86"
                   alt="Упаковка Сat Energy SLIM с гречкой 500 граммов.">
               </picture>
               <dl class="catalog-card__table card-table">
                 <div class="card-table__row">
                   <dt class="card-table__data">Масса</dt>
-                  <dd class="card-table__data">500 г</dd>
+                  <dd class="card-table__data card-table__weight">500 г</dd>
                 </div>
                 <div class="card-table__row">
                   <dt class="card-table__data">Вкус</dt>
@@ -217,20 +229,21 @@
         <li class="catalog__item catalog-card">
           <div class="catalog-card__wrapper">
             <div class="catalog-card__wrapper-inner">
-              <h3 class="catalog-card__title">Cat Energy SLIM 1000 г</h3>
+              <h3 class="catalog-card__title catalog-card__title--big catalog-card__title--second">Cat Energy SLIM 1000
+                г</h3>
               <picture>
                 <source media="(min-width: 768px)"
                   srcset="img/buckwheat-slim-1000-tablet@1x.png 1x, img/buckwheat-slim-1000-tablet@2x.png 2x"
                   width="168" height="200">
 
-                <img class="catalog-card__image catalog-card__image--big catalog-card__image-buckwheat-big"
-                  src="img/buckwheat-slim-1000.png" srcset="img/buckwheat-slim-1000@2x.png 2x" width="84" height="101"
-                  alt="Упаковка Сat Energy SLIM с гречкой 500 граммов.">
+                <img class="catalog-card__image catalog-card__image--big" src="img/buckwheat-slim-1000.png"
+                  srcset="img/buckwheat-slim-1000@2x.png 2x" width="84" height="101"
+                  alt="Упаковка Сat Energy SLIM с гречкой 1000 граммов.">
               </picture>
               <dl class="catalog-card__table card-table">
                 <div class="card-table__row">
                   <dt class="card-table__data">Масса</dt>
-                  <dd class="card-table__data">1000 г</dd>
+                  <dd class="card-table__data card-table__weight">1000 г</dd>
                 </div>
                 <div class="card-table__row">
                   <dt class="card-table__data">Вкус</dt>
@@ -255,13 +268,14 @@
                 <source media="(min-width: 768px)"
                   srcset="img/rice-slim-500-tablet@1x.png 1x, img/rice-slim-500-tablet@2x.png 2x" width="163"
                   height="174">
-                <img class="catalog-card__image" src="img/rice-slim-500.png" srcset="img/rice-slim-500@2x.png 2x"
-                  width="68" height="86" alt="Упаковка Сat Energy SLIM с рисом 500 граммов.">
+                <img class="catalog-card__image catalog-card__image-second" src="img/rice-slim-500.png"
+                  srcset="img/rice-slim-500@2x.png 2x" width="68" height="86"
+                  alt="Упаковка Сat Energy SLIM с рисом 500 граммов.">
               </picture>
               <dl class="catalog-card__table card-table">
                 <div class="card-table__row">
                   <dt class="card-table__data">Масса</dt>
-                  <dd class="card-table__data">500 г</dd>
+                  <dd class="card-table__data card-table__weight">500 г</dd>
                 </div>
                 <div class="card-table__row">
                   <dt class="card-table__data">Вкус</dt>
@@ -282,7 +296,7 @@
           <div class="show-more__card">
             <h2 class="show-more__title">Показать еще 100500 товаров</h2>
             <p class="show-more__description">На самом деле вкусов гораздо больше!</p>
-            <a class="show-more__button button--show-more button">Показать все</a>
+            <a class="show-more__button button--show-more button" href="#">Показать все</a>
           </div>
         </li>
       </ul>
@@ -372,11 +386,11 @@
   <footer class="main-footer">
     <div class="main-footer__wrapper">
       <h2 class="visually-hidden">Наш адрес</h2>
-      <div class="main-footer-adress">
+      <div class="main-footer-adress main-footer-adress--catalog">
         <div class="main-footer-adress__wrapper main-footer-adress__wrapper--catalog">
-          <b class="main-footer-adress__title main-footer-adress__title--catalog">Приглашаем<br> к сотрудничеству
+          <b class="main-footer-adress__title">Приглашаем<br> к сотрудничеству
             дилеров!</b>
-          <div class="main-footer-adress__description-wrapper main-footer-adress__description-wrapper--catalog">
+          <div class="main-footer-adress__description-wrapper">
             <p class="main-footer-adress__description">ул. Большая<br> Конюшенная, д. 19/8</p>
             <p class="main-footer-adress__description">Санкт-Петербург</p>
           </div>
@@ -386,7 +400,7 @@
           width="320" height="362" allowfullscreen
           title="Офис компании по адресу набережная реки Карповки, 5, литера П, Санкт-Петербург"></iframe>
       </div>
-      <div class="main-footer__ending main-footer__ending--catalog">
+      <div class="main-footer__ending">
         <div class="main-footer__logo">
           <img class="main-footer__logo-image" src="img/logo-title.svg" width="128" height="24"
             alt="Название Cat Energy.">
@@ -395,37 +409,41 @@
           <h2 class="visually-hidden social__title">Давайте дружить!</h2>
           <ul class="social__list reset-list">
             <li class="social__item">
-              <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy">
+              <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy"
+                aria-label="Группа HTML Academy ВКонтакте.">
                 <span class="visually-hidden">Мы в Вконтакте.</span>
                 <svg class="social__icon-vkontakte" width="27" height="17">
-                  <use href="img/sprite.svg#vk"></use>
+                  <use xlink:href="#vk"></use>
                 </svg>
               </a>
             </li>
             <li class="social__item">
-              <a class="social__link social__link--youtube" href="https://www.youtube.com/user/htmlacademyru">
+              <a class="social__link social__link--youtube" href="https://www.youtube.com/user/htmlacademyru"
+                aria-label="Канал HTML Academy на Youtube.">
                 <span class="visually-hidden">Мы в Ютубе.</span>
                 <svg class="social__icon-youtube" width="28" height="22">
-                  <use href="img/sprite.svg#youtube"></use>
+                  <use xlink:href="#youtube"></use>
                 </svg>
               </a>
             </li>
             <li class="social__item">
-              <a class="social__link social__link--telegram" href="https://t.me/htmlacademy">
+              <a class="social__link social__link--telegram" href="https://t.me/htmlacademy"
+                aria-label="Канал HTML Academy в Телеграме.">
                 <span class="visually-hidden">Мы в Телеграме.</span>
                 <svg class="social__icon-telegram" width="28" height="22">
-                  <use href="img/sprite.svg#telegram"></use>
+                  <use xlink:href="#telegram"></use>
                 </svg>
               </a>
             </li>
           </ul>
         </div>
         <div class="main-footer__academy academy">
+
           <a class="academy__image" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Сайт HTML Academy.">
             <span class="academy__title">HTML Academy</span>
             <span class="visually-hidden">Перейти на сайт HTML Academy.</span>
             <svg class="academy__icon" width="27" height="34">
-              <use href="img/sprite.svg#academy"></use>
+              <use xlink:href="#academy"></use>
             </svg>
           </a>
         </div>

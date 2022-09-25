@@ -8,32 +8,35 @@
 
 .main-footer-adress__wrapper {
   display: flex;
-  padding: 28px 22px 25px 23px;
+  padding: 20px 22px 25px 23px;
   column-gap: 7px;
   justify-content: space-between;
 }
 
 .main-footer-adress__wrapper--catalog {
-  background-color: @focus-color;
-  padding: 20px 22px 17px 23px;
+  padding-top: 27px;
+}
+
+.main-footer-adress__wrapper-form {
+  padding: 24px 22px 25px 23px;
 }
 
 .main-footer-adress__description {
-  font-family: "Arial", sans-serif;
+  font-family: "Arial", "Helvetica", sans-serif;
   font-size: 14px;
   line-height: 20px;
   margin: 0;
   max-height: 40px;
 }
 
+.main-footer-adress--catalog {
+  background-color: @focus-color;
+}
+
 .main-footer-adress__description-wrapper {
   display: flex;
   flex-direction: column;
   min-width: 137px;
-}
-
-.main-footer-adress__description-wrapper--catalog {
-  margin-top: 11px;
 }
 
 .main-footer-adress__map {
@@ -45,16 +48,9 @@
   margin-right: auto;
 }
 
-.main-footer-adress__title--catalog {
-  min-width: 132px;
-  margin-top: 9px;
-  margin-left: -2px;
-  letter-spacing: 0;
-}
-
 @media (min-width: @tablet-width) {
   .main-footer-adress__wrapper {
-    padding: 48px 70px 59px 70px;
+    padding: 59px 70px 59px 70px;
   }
 
   .main-footer-adress__map {
@@ -82,21 +78,35 @@
 
 
 @media (min-width: @desctop-width) {
+  .main-footer-adress__wrapper {
+    padding: 61px 36px 57px 23px;
+  }
+
   .main-footer-adress__wrapper--catalog {
     position: absolute;
     content: "";
-    width: 565px;
-    height: 198px;
-    background-color: @base-color;
-    padding: 44px 0;
-    justify-content: space-evenly;
-    bottom: 95px;
+    width: 506px;
+    bottom: 107px;
     left: 110px;
-    max-height: 94px;
+    background-color: @base-color;
+  }
+
+  .main-footer-adress__wrapper--index {
+    position: absolute;
+    content: "";
+    width: 506px;
+    background-color: @base-color;
+    bottom: 107px;
+    left: 110px;
   }
 
   .main-footer-adress {
     position: relative;
+  }
+
+  .main-footer-adress__title {
+    padding-left: 59px;
+    padding-bottom: 3px;
   }
 
   .main-footer-adress__map {
@@ -104,11 +114,21 @@
     max-height: 400px;
   }
 
-  .main-footer-adress__description-wrapper--catalog {
-    margin-top: 5px;
+  .main-footer-adress__description {
+    text-align: left;
+    margin-top: -2px;
+    margin-bottom: 4px;
   }
 
-  .main-footer-adress__description {
+  .main-footer-adress__wrapper-form {
+    position: absolute;
+    background-color: @base-color;
+    top: 93px;
+    left: 109px;
+    gap: 70px;
+  }
+
+  .main-footer-adress__description-wrapper {
     text-align: left;
   }
 }
